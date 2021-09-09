@@ -1,0 +1,11 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <FontFamily x:Key="IconFontFamily">pack://application;,,,/component/Assets/Fonts/#iconfont</FontFamily>
+    <!--前景色-->
+    <SolidColorBrush x:Key="CustomizeForeground" Color="#fff"/>
+
+    
+    <SolidColorBrush x:Key="PrimaryColor" Color="#2775b6"/>
+    <SolidColorBrush x:Key="HoverColor" Color="#2b73af"/>
+
+</ResourceDictionary>
