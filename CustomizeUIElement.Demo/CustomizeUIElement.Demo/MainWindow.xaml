@@ -5,8 +5,18 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CustomizeUIElement.Demo"
         mc:Ignorable="d"
-        Title="MainWindow">
+        Title="MainWindow" Width="800" Height="700">
     <Grid>
+        <TabControl>
+            <TabItem Header="button">
+                <UniformGrid Columns="8">
+                    <Button Style="{DynamicResource PrimaryMiniCircleButtonStyle}" Content="&#xe717;" ToolTip="PrimaryMiniButton"/>
+                    <Button Style="{DynamicResource PrimaryMiniCircleButtonStyle}" Content="&#xe717;" ToolTip="PrimaryMiniButton" IsEnabled="False"/>
+
+                    <Button Style="{DynamicResource DefaultMiniCircleButtonStyle}" Content="&#xe717;"/>
+                </UniformGrid>
+            </TabItem>
+        </TabControl>
         
     </Grid>
 </Window>

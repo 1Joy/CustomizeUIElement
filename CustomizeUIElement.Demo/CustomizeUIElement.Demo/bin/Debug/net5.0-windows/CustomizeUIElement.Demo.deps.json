@@ -7,14 +7,27 @@
   "targets": {
     ".NETCoreApp,Version=v5.0": {
       "CustomizeUIElement.Demo/1.0.0": {
+        "dependencies": {
+          "CustomizeUIElement.WpfControlLibrary": "1.0.0"
+        },
         "runtime": {
           "CustomizeUIElement.Demo.dll": {}
+        }
+      },
+      "CustomizeUIElement.WpfControlLibrary/1.0.0": {
+        "runtime": {
+          "CustomizeUIElement.WpfControlLibrary.dll": {}
         }
       }
     }
   },
   "libraries": {
     "CustomizeUIElement.Demo/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "CustomizeUIElement.WpfControlLibrary/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
