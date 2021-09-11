@@ -10,6 +10,7 @@
         <TabControl>
             <TabItem Header="button">
                 <StackPanel>
+                    <TextBlock Text="buttons:" Margin="10" FontSize="20"/>
                     <UniformGrid Columns="8" Margin="10">
                         <Button Style="{DynamicResource PrimaryMiniCircleButtonStyle}" Content="&#xe717;" ToolTip="PrimaryMiniButton"/>
                         <Button Style="{DynamicResource PrimaryMiniCircleButtonStyle}" Content="&#xe717;" ToolTip="PrimaryMiniButton" IsEnabled="False"/>
@@ -26,6 +27,8 @@
                         <Button Style="{DynamicResource PrimaryTextButtonStyle}" Content="Text"/>
                         <Button Style="{DynamicResource DefaultTextButtonStyle}" Content="&#xe717;"/>
                     </UniformGrid>
+
+                    <TextBlock Text="custom corner radius:" Margin="10" FontSize="20"/>
                 </StackPanel>
                 
             </TabItem>
