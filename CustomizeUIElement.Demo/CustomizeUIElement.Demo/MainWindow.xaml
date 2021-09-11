@@ -9,12 +9,25 @@
     <Grid>
         <TabControl>
             <TabItem Header="button">
-                <UniformGrid Columns="8">
-                    <Button Style="{DynamicResource PrimaryMiniCircleButtonStyle}" Content="&#xe717;" ToolTip="PrimaryMiniButton"/>
-                    <Button Style="{DynamicResource PrimaryMiniCircleButtonStyle}" Content="&#xe717;" ToolTip="PrimaryMiniButton" IsEnabled="False"/>
+                <StackPanel>
+                    <UniformGrid Columns="8" Margin="10">
+                        <Button Style="{DynamicResource PrimaryMiniCircleButtonStyle}" Content="&#xe717;" ToolTip="PrimaryMiniButton"/>
+                        <Button Style="{DynamicResource PrimaryMiniCircleButtonStyle}" Content="&#xe717;" ToolTip="PrimaryMiniButton" IsEnabled="False"/>
 
-                    <Button Style="{DynamicResource DefaultMiniCircleButtonStyle}" Content="&#xe717;"/>
-                </UniformGrid>
+                        <Button Style="{DynamicResource DefaultMiniCircleButtonStyle}" Content="&#xe717;"/>
+                    </UniformGrid>
+
+                    <UniformGrid Columns="8" Margin="10">
+                        <Button Style="{DynamicResource PrimaryCornerButtonStyle}" Content="Primary"/>
+                        <Button Style="{DynamicResource DefaultCornerButtonStyle}" Content="Default"/>
+                        <Button Style="{DynamicResource DefaultBorderCornerButtonStyle}" Content="Default1"/>
+                        <Button Style="{DynamicResource PrimaryCornerButtonStyle}" Content="IsEnable" IsEnabled="False"/>
+
+                        <Button Style="{DynamicResource PrimaryTextButtonStyle}" Content="Text"/>
+                        <Button Style="{DynamicResource DefaultTextButtonStyle}" Content="&#xe717;"/>
+                    </UniformGrid>
+                </StackPanel>
+                
             </TabItem>
         </TabControl>
         

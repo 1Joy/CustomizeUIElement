@@ -8,16 +8,12 @@
                 <Setter Property="Foreground" Value="{StaticResource CustomizeForeground}"/>
             </Style>
 
-            <Style x:Key="BaseMiniCircleButton" TargetType="{x:Type Button}" BasedOn="{StaticResource BaseButton}">
-                <Setter Property="Width" Value="40"/>
-            </Style>
-
             <!--圆形Primary按钮-->
-            <Style x:Key="BaseMiniCircleButtonStyle" TargetType="{x:Type Button}" BasedOn="{StaticResource BaseMiniCircleButton}">
+            <Style x:Key="BaseMiniCircleButtonStyle" TargetType="{x:Type Button}" BasedOn="{StaticResource BaseButton}">
                 <Setter Property="Template">
                     <Setter.Value>
                         <ControlTemplate TargetType="{x:Type Button}">
-                            <Grid Width="{TemplateBinding Width}" Height="{TemplateBinding Width}">
+                            <Grid Width="40" Height="40">
                                 <Border x:Name="_border" Background="{TemplateBinding Background}" Width="30" Height="30" BorderBrush="{TemplateBinding BorderBrush}"
                                         BorderThickness="{TemplateBinding BorderThickness}"
                                     CornerRadius="15" ToolTip="{TemplateBinding ToolTip}" Padding="0">
@@ -57,7 +53,122 @@
                 <Setter Property="Background" Value="{DynamicResource DefaultColor}"/>
                 <Setter Property="Foreground" Value="{DynamicResource CustomizeForeground1}"/>
                 <Setter Property="BorderBrush" Value="{DynamicResource BorderColor}"/>
-                <Setter Property="BorderThickness" Value="0.5"/>
+                <Setter Property="BorderThickness" Value="0.2"/>
+            </Style>
+            
+            <!--圆角按钮-->
+            <Style x:Key="BaseCornerButtonStyle" TargetType="{x:Type Button}" BasedOn="{StaticResource BaseButton}">
+                <Setter Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate TargetType="Button">
+                            <Grid Width="{TemplateBinding Width}" Height="{TemplateBinding Height}">
+                            <Border x:Name="_border" Width="{TemplateBinding Width}" Height="{TemplateBinding Height}" CornerRadius="3"
+                                    Background="{TemplateBinding Background}" Padding="5" BorderBrush="{TemplateBinding BorderBrush}"
+                                    BorderThickness="{TemplateBinding BorderThickness}">
+                                    <Border.Effect>
+                                        <DropShadowEffect x:Name="_borderShadow" BlurRadius="8" Color="#5e616d" Direction="50" Opacity="0.5"
+                                                          RenderingBias="Performance" ShadowDepth="1">
+                                        </DropShadowEffect>
+                                    </Border.Effect>
+                            </Border>
+                                <TextBlock FontFamily="{TemplateBinding FontFamily}" Text="{TemplateBinding Content}" HorizontalAlignment="Center"
+                                           VerticalAlignment="Center" FontSize="15"/>                            
+                            </Grid>
+                            <ControlTemplate.Triggers>
+                                <Trigger Property="IsEnabled" Value="False">
+                                    <Setter Property="Background" Value="{DynamicResource ShadowColor}" TargetName="_border"/>
+                                </Trigger>
+                            </ControlTemplate.Triggers>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+
+            <Style x:Key="PrimaryCornerButtonStyle" TargetType="{x:Type Button}" BasedOn="{StaticResource BaseCornerButtonStyle}">
+                <Setter Property="Width" Value="65"/>
+                <Setter Property="Height" Value="30"/>
+                <Setter Property="BorderThickness" Value="0"/>
+                <Setter Property="Background" Value="{DynamicResource PrimaryColor}"/>
+                <Style.Triggers>
+                    <Trigger Property="IsMouseOver" Value="True">
+                        <Setter Property="Width" Value="61"/>
+                        <Setter Property="Height" Value="31"/>
+                        <Setter Property="Background" Value="{DynamicResource HoverColor}"/>
+                    </Trigger>
+                </Style.Triggers>
+            </Style>
+
+            <Style x:Key="DefaultCornerButtonStyle" TargetType="{x:Type Button}" BasedOn="{StaticResource BaseCornerButtonStyle}">
+                <Setter Property="Width" Value="65"/>
+                <Setter Property="Height" Value="30"/>
+                <Setter Property="Background" Value="{x:Null}"/>
+                <Setter Property="Foreground" Value="{DynamicResource CustomizeForeground1}"/>
+                <Setter Property="BorderThickness" Value="0.2"/>
+                <Style.Triggers>
+                    <Trigger Property="IsMouseOver" Value="True">
+                        <Setter Property="Width" Value="61"/>
+                        <Setter Property="Height" Value="31"/>
+                        <Setter Property="Foreground" Value="{DynamicResource CustomizeForeground}"/>
+                        <Setter Property="Background" Value="{DynamicResource HoverColor}"/>
+                    </Trigger>
+                </Style.Triggers>
+            </Style>
+
+            <Style x:Key="DefaultBorderCornerButtonStyle" TargetType="{x:Type Button}" BasedOn="{StaticResource BaseCornerButtonStyle}">
+                <Setter Property="Width" Value="65"/>
+                <Setter Property="Height" Value="30"/>
+                <Setter Property="Background" Value="{x:Null}"/>
+                <Setter Property="Foreground" Value="{DynamicResource CustomizeForeground1}"/>
+                <Setter Property="BorderThickness" Value="0.2"/>
+                <Style.Triggers>
+                    <Trigger Property="IsMouseOver" Value="True">
+                        <Setter Property="Width" Value="61"/>
+                        <Setter Property="Height" Value="31"/>
+                        <Setter Property="Foreground" Value="{DynamicResource HoverColor}"/>
+                        <Setter Property="BorderBrush" Value="{DynamicResource HoverColor}"/>
+                    </Trigger>
+                </Style.Triggers>
+            </Style>
+
+            <Style x:Key="BaseTextButtonStyle" TargetType="{x:Type Button}" BasedOn="{StaticResource BaseButton}">
+                <Setter Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate TargetType="Button">
+                            <Grid Width="{TemplateBinding Width}" Height="{TemplateBinding Height}">
+                                <Border x:Name="_border" Width="{TemplateBinding Width}" Height="{TemplateBinding Height}" CornerRadius="3"
+                                    Background="{TemplateBinding Background}" Padding="5">
+                                </Border>
+                                <TextBlock FontFamily="{TemplateBinding FontFamily}" Text="{TemplateBinding Content}" HorizontalAlignment="Center"
+                                           VerticalAlignment="Center" FontSize="15"/>
+                            </Grid>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+
+            <Style x:Key="PrimaryTextButtonStyle" TargetType="{x:Type Button}" BasedOn="{StaticResource BaseTextButtonStyle}">
+                <Setter Property="Width" Value="65"/>
+                <Setter Property="Height" Value="30"/>
+                <Setter Property="Background" Value="{x:Null}"/>
+                <Setter Property="Foreground" Value="{DynamicResource CustomizeForeground1}"/>
+                <Style.Triggers>
+                    <Trigger Property="IsMouseOver" Value="True">
+                        <Setter Property="Foreground" Value="{DynamicResource CustomizeForeground}"/>
+                        <Setter Property="Background" Value="{DynamicResource HoverColor}"/>
+                    </Trigger>
+                </Style.Triggers>
+            </Style>
+
+            <Style x:Key="DefaultTextButtonStyle" TargetType="{x:Type Button}" BasedOn="{StaticResource BaseTextButtonStyle}">
+                <Setter Property="Width" Value="65"/>
+                <Setter Property="Height" Value="30"/>
+                <Setter Property="Background" Value="{x:Null}"/>
+                <Setter Property="Foreground" Value="{DynamicResource CustomizeForeground1}"/>
+                <Style.Triggers>
+                    <Trigger Property="IsMouseOver" Value="True">
+                        <Setter Property="Foreground" Value="{DynamicResource HoverColor}"/>
+                    </Trigger>
+                </Style.Triggers>
             </Style>
         </ResourceDictionary>
     </ResourceDictionary.MergedDictionaries>
