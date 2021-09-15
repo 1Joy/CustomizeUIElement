@@ -30,7 +30,7 @@
                     </UniformGrid>
 
                     <TextBlock Text="custom corner radius:" Margin="10" FontSize="20"/>
-                    <UniformGrid Columns="8">
+                    <UniformGrid Columns="8" Margin="10">
                         <Button attachProp:ButtonAttachPropertyManager.CornerRadius="5" 
                                 Style="{DynamicResource PrimaryCustomizeCornerRadiusButtonStyle}"
                                 Content="radius"/>
