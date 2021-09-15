@@ -3,6 +3,7 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:attachProp="clr-namespace:CustomizeUIElement.WpfControlLibrary.AttachPropertys;assembly=CustomizeUIElement.WpfControlLibrary"
         xmlns:local="clr-namespace:CustomizeUIElement.Demo"
         mc:Ignorable="d"
         Title="MainWindow" Width="800" Height="700">
@@ -29,6 +30,23 @@
                     </UniformGrid>
 
                     <TextBlock Text="custom corner radius:" Margin="10" FontSize="20"/>
+                    <UniformGrid Columns="8">
+                        <Button attachProp:ButtonAttachPropertyManager.CornerRadius="5" 
+                                Style="{DynamicResource PrimaryCustomizeCornerRadiusButtonStyle}"
+                                Content="radius"/>
+                        <Button attachProp:ButtonAttachPropertyManager.CornerRadius="15" 
+                                Style="{DynamicResource PrimaryCustomizeCornerRadiusButtonStyle}"
+                                Content="radius"/>
+                        <Button attachProp:ButtonAttachPropertyManager.CornerRadius="20 0 20 0" 
+                                Style="{DynamicResource PrimaryCustomizeCornerRadiusButtonStyle}"
+                                Content="radius"/>
+                        <Button attachProp:ButtonAttachPropertyManager.CornerRadius="5" 
+                                Style="{DynamicResource DefaultCustomizeCornerRadiusButtonStyle}"
+                                Content="radius"/>
+                        <Button attachProp:ButtonAttachPropertyManager.CornerRadius="20 0 20 0" 
+                                Style="{DynamicResource DefaultCustomizeCornerRadiusButtonStyle}"
+                                Content="radius"/>
+                    </UniformGrid>
                 </StackPanel>
                 
             </TabItem>
