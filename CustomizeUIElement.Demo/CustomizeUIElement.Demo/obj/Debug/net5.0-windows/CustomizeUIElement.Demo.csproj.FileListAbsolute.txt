@@ -24,3 +24,8 @@ D:\Code\JoyCode\CustomizeUIElement\CustomizeUIElement.Demo\CustomizeUIElement.De
 D:\Code\JoyCode\CustomizeUIElement\CustomizeUIElement.Demo\CustomizeUIElement.Demo\obj\Debug\net5.0-windows\CustomizeUIElement.Demo.csprojAssemblyReference.cache
 D:\Code\JoyCode\CustomizeUIElement\CustomizeUIElement.Demo\CustomizeUIElement.Demo\obj\Debug\net5.0-windows\App.baml
 D:\Code\JoyCode\CustomizeUIElement\CustomizeUIElement.Demo\CustomizeUIElement.Demo\obj\Debug\net5.0-windows\CustomizeUIElement.Demo.csproj.CopyComplete
+D:\Code\JoyCode\CustomizeUIElement\CustomizeUIElement.Demo\CustomizeUIElement.Demo\obj\Debug\net5.0-windows\UCButtonView.g.cs
+D:\Code\JoyCode\CustomizeUIElement\CustomizeUIElement.Demo\CustomizeUIElement.Demo\obj\Debug\net5.0-windows\GeneratedInternalTypeHelper.g.cs
+D:\Code\JoyCode\CustomizeUIElement\CustomizeUIElement.Demo\CustomizeUIElement.Demo\obj\Debug\net5.0-windows\UCButtonView.baml
+D:\Code\JoyCode\CustomizeUIElement\CustomizeUIElement.Demo\CustomizeUIElement.Demo\obj\Debug\net5.0-windows\UCTextBoxView.g.cs
+D:\Code\JoyCode\CustomizeUIElement\CustomizeUIElement.Demo\CustomizeUIElement.Demo\obj\Debug\net5.0-windows\UCTextBoxView.baml

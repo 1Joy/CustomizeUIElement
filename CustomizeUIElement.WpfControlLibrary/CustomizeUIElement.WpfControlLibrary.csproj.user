@@ -5,6 +5,9 @@
     <Page Update="Styles\ButtonStyles.xaml">
       <SubType>Designer</SubType>
     </Page>
+    <Page Update="Styles\TextBoxStyles.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="Styles\ThemeStyles.xaml">
       <SubType>Designer</SubType>
     </Page>

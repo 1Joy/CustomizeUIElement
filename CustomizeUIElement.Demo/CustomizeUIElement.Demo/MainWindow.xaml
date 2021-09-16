@@ -10,45 +10,10 @@
     <Grid>
         <TabControl>
             <TabItem Header="button">
-                <StackPanel>
-                    <TextBlock Text="buttons:" Margin="10" FontSize="20"/>
-                    <UniformGrid Columns="8" Margin="10">
-                        <Button Style="{DynamicResource PrimaryMiniCircleButtonStyle}" Content="&#xe717;" ToolTip="PrimaryMiniButton"/>
-                        <Button Style="{DynamicResource PrimaryMiniCircleButtonStyle}" Content="&#xe717;" ToolTip="PrimaryMiniButton" IsEnabled="False"/>
-
-                        <Button Style="{DynamicResource DefaultMiniCircleButtonStyle}" Content="&#xe717;"/>
-                    </UniformGrid>
-
-                    <UniformGrid Columns="8" Margin="10">
-                        <Button Style="{DynamicResource PrimaryCornerButtonStyle}" Content="Primary"/>
-                        <Button Style="{DynamicResource DefaultCornerButtonStyle}" Content="Default"/>
-                        <Button Style="{DynamicResource DefaultBorderCornerButtonStyle}" Content="Default1"/>
-                        <Button Style="{DynamicResource PrimaryCornerButtonStyle}" Content="IsEnable" IsEnabled="False"/>
-
-                        <Button Style="{DynamicResource PrimaryTextButtonStyle}" Content="Text"/>
-                        <Button Style="{DynamicResource DefaultTextButtonStyle}" Content="&#xe717;"/>
-                    </UniformGrid>
-
-                    <TextBlock Text="custom corner radius:" Margin="10" FontSize="20"/>
-                    <UniformGrid Columns="8" Margin="10">
-                        <Button attachProp:ButtonAttachPropertyManager.CornerRadius="5" 
-                                Style="{DynamicResource PrimaryCustomizeCornerRadiusButtonStyle}"
-                                Content="radius"/>
-                        <Button attachProp:ButtonAttachPropertyManager.CornerRadius="15" 
-                                Style="{DynamicResource PrimaryCustomizeCornerRadiusButtonStyle}"
-                                Content="radius"/>
-                        <Button attachProp:ButtonAttachPropertyManager.CornerRadius="20 0 20 0" 
-                                Style="{DynamicResource PrimaryCustomizeCornerRadiusButtonStyle}"
-                                Content="radius"/>
-                        <Button attachProp:ButtonAttachPropertyManager.CornerRadius="5" 
-                                Style="{DynamicResource DefaultCustomizeCornerRadiusButtonStyle}"
-                                Content="radius"/>
-                        <Button attachProp:ButtonAttachPropertyManager.CornerRadius="20 0 20 0" 
-                                Style="{DynamicResource DefaultCustomizeCornerRadiusButtonStyle}"
-                                Content="radius"/>
-                    </UniformGrid>
-                </StackPanel>
-                
+                <local:UCButtonView/>
+            </TabItem>
+            <TabItem Header="TextBox">
+                <local:UCTextBoxView/>
             </TabItem>
         </TabControl>
         
