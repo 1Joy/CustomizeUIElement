@@ -8,15 +8,56 @@
              mc:Ignorable="d" >
     <Grid>
         <StackPanel>
-            <TextBlock Text="TextBox:" Margin="10"/>
-            <UniformGrid Columns="5" Margin="10">
-                <TextBox Style="{DynamicResource DefaultTextBoxStyle}" Width="150" Height="30" Text="DefaultTextBoxStyle"/>
+            <TextBlock Text="TextBox:" Margin="10" FontSize="20"/>
+            <UniformGrid Columns="5" >
+                <TextBox Style="{DynamicResource DefaultTextBoxStyle}" Width="150" Height="30" />
             </UniformGrid>
 
-            <TextBlock Text="icon TextBox:" Margin="10"/>
-            <UniformGrid Columns="5" Margin="10">
-                <TextBox attachProp:TextBoxAttachPropertyManager.TextBoxIcon="&#xe717;" Style="{DynamicResource IconTextBoxStyle}" 
-                         Width="150" Height="30" Text="DefaultTextBoxStyle"/>
+            <TextBlock Text="icon TextBox:" Margin="10" FontSize="20"/>
+            <UniformGrid Columns="5" >
+                <TextBox attachProp:TextBoxAttachPropertyManager.TextBoxIcon="&#xe717;" Style="{DynamicResource PlaceHolderIconTextBoxStyle}" 
+                         Width="150" Height="30"  />
+
+                <TextBox attachProp:TextBoxAttachPropertyManager.TextBoxIcon="&#xe717;" Style="{DynamicResource PlaceHolderIconBgTextBoxStyle}" 
+                         Width="150" Height="30"  />
+
+                <TextBox attachProp:TextBoxAttachPropertyManager.TextBoxIcon="&#xe717;" Style="{DynamicResource PlaceHolderIconNoBorderTextBoxStyle}" 
+                         Width="150" Height="30"  />
+            </UniformGrid>
+
+            <TextBlock Text="placeholder TextBox:" Margin="10" FontSize="20"/>
+            <UniformGrid Columns="5" >
+                <TextBox attachProp:TextBoxAttachPropertyManager.PlaceHolder="请输入通讯地址" Style="{DynamicResource PlaceHolderTextBoxStyle}" 
+                         Width="150" Height="30"  />
+
+                <TextBox attachProp:TextBoxAttachPropertyManager.PlaceHolder="请输入通讯地址" Style="{DynamicResource PlaceHolderNoBorderTextBoxStyle}" 
+                         Width="150" Height="30"  />
+            </UniformGrid>
+
+            <TextBlock Text="placeholder and icon TextBox:" Margin="10" FontSize="20"/>
+            <UniformGrid Columns="5" >
+                <TextBox attachProp:TextBoxAttachPropertyManager.PlaceHolder="请输入通讯地址"
+                         attachProp:TextBoxAttachPropertyManager.TextBoxIcon="&#xe717;"
+                         Style="{DynamicResource PlaceHolderIconTextBoxStyle}" 
+                         Width="150" Height="30" />
+
+                <TextBox attachProp:TextBoxAttachPropertyManager.TextBoxIcon="&#xe717;"
+                         attachProp:TextBoxAttachPropertyManager.PlaceHolder="请输入通讯地址"
+                         Style="{DynamicResource PlaceHolderIconBgTextBoxStyle}" 
+                         Width="150" Height="30"  />
+
+                <TextBox attachProp:TextBoxAttachPropertyManager.TextBoxIcon="&#xe717;"
+                         attachProp:TextBoxAttachPropertyManager.PlaceHolder="请输入通讯地址"
+                         Style="{DynamicResource PlaceHolderIconNoBorderTextBoxStyle}" 
+                         Width="150" Height="30"  />
+            </UniformGrid>
+
+            <TextBlock Text="TextBox clearBtn:" Margin="10" FontSize="20"/>
+            <UniformGrid Columns="5" >
+                <TextBox attachProp:TextBoxAttachPropertyManager.PlaceHolder="请输入通讯地址"
+                         attachProp:TextBoxAttachPropertyManager.TextBoxIcon="&#xe717;"
+                         Style="{DynamicResource PlaceHolderIconTextBoxStyle}" 
+                         Width="150" Height="30" />
             </UniformGrid>
         </StackPanel>   
     </Grid>

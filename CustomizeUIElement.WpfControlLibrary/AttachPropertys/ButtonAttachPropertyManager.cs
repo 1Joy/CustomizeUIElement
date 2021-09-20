@@ -7,7 +7,7 @@ using System.Windows;
 
 namespace CustomizeUIElement.WpfControlLibrary.AttachPropertys
 {
-    public class ButtonAttachPropertyManager: DependencyObject
+    public static class ButtonAttachPropertyManager
     {
         #region CornerRadius
         private static readonly CornerRadius DefaultCornerRadius = new CornerRadius(2);

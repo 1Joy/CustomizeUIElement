@@ -1,6 +1,6 @@
 ﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-                    xmlns:attachProp="clr-namespace:CustomizeUIElement.WpfControlLibrary.AttachPropertys;assembly=CustomizeUIElement.WpfControlLibrary"
+                    xmlns:attachProp="clr-namespace:CustomizeUIElement.WpfControlLibrary.AttachPropertys"
                     >
     <ResourceDictionary.MergedDictionaries>
         <ResourceDictionary Source="pack://application:,,,/CustomizeUIElement.WpfControlLibrary;component/Styles/ThemeStyles.xaml"/>
@@ -28,29 +28,161 @@
                 </Setter>
             </Style>
 
-            <Style x:Key="IconTextBoxStyle" TargetType="{x:Type TextBox}" BasedOn="{StaticResource BaseTextBox}">
+            <Style x:Key="PlaceHolderIconTextBoxStyle" TargetType="{x:Type TextBox}" BasedOn="{StaticResource BaseTextBox}">
                 <Setter Property="FontFamily" Value="{DynamicResource IconFontFamily}"/>
                 <Setter Property="Template">
                     <Setter.Value>
                         <ControlTemplate TargetType="TextBox">
                             <Border x:Name="_border" CornerRadius="5" Width="{TemplateBinding Width}" Height="{TemplateBinding Height}"
                                     MinHeight="30" MinWidth="120"
-                                    BorderBrush="{DynamicResource BorderColor}" BorderThickness="0.5" Padding="5,2">
+                                    BorderBrush="{DynamicResource BorderColor}" BorderThickness="0.5" Padding="0,5">
                                 <Grid>
                                     <Grid.ColumnDefinitions>
                                         <ColumnDefinition Width="20"/>
                                         <ColumnDefinition/>
                                     </Grid.ColumnDefinitions>
-                                    <TextBlock FontFamily="{DynamicResource IconFontFamily}"
-                                               Text="{Binding Path=(attachProp:TextBoxAttachPropertyManager.TextBoxIcon),RelativeSource={RelativeSource TemplatedParent}}"/>
+                                    <Border Grid.Column="0" BorderBrush="{DynamicResource BorderColor}" BorderThickness="0,0,0.5,0"/>
+                                    <TextBlock Grid.Column="0" FontFamily="{DynamicResource IconFontFamily}" VerticalAlignment="Center" 
+                                               HorizontalAlignment="Center" FontSize="14"
+                                               Text="{TemplateBinding attachProp:TextBoxAttachPropertyManager.TextBoxIcon}"/>
+                                    <TextBlock Grid.Column="1" x:Name="_placeHolder" Visibility="Collapsed" VerticalAlignment="Center" 
+                                               Foreground="{DynamicResource ForeBgColor}" 
+                                               Text="{TemplateBinding attachProp:TextBoxAttachPropertyManager.PlaceHolder}"/>
                                     <ScrollViewer Grid.Column="1"  x:Name="PART_ContentHost" Focusable="True" VerticalAlignment="Center"
                                                    HorizontalScrollBarVisibility="Hidden" VerticalScrollBarVisibility="Hidden"/>
                                 </Grid>
                             </Border>
+                            <ControlTemplate.Triggers>
+                                <Trigger Property="IsMouseOver" Value="True">
+                                    <Setter Property="BorderBrush" Value="{DynamicResource HoverColor}" TargetName="_border"/>
+                                </Trigger>
+                                <DataTrigger Binding="{Binding Text,RelativeSource={RelativeSource Self}}" Value="">
+                                    <Setter Property="Visibility" Value="Visible" TargetName="_placeHolder"/>
+                                </DataTrigger>
+                            </ControlTemplate.Triggers>
                         </ControlTemplate>
                     </Setter.Value>
                 </Setter>
             </Style>
+
+            <Style x:Key="PlaceHolderIconBgTextBoxStyle" TargetType="TextBox" BasedOn="{StaticResource BaseTextBox}">
+                <Setter Property="FontFamily" Value="{DynamicResource IconFontFamily}"/>
+                <Setter Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate TargetType="TextBox">
+                            <Border x:Name="_border" CornerRadius="5" Width="{TemplateBinding Width}" Height="{TemplateBinding Height}"
+                                    MinHeight="30" MinWidth="120" Padding=".2"
+                                    BorderBrush="{DynamicResource BorderColor}" BorderThickness="0.5">
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="30"/>
+                                        <ColumnDefinition/>
+                                    </Grid.ColumnDefinitions>
+                                    <Border Grid.Column="0" Background="{DynamicResource ForeBgColor}" CornerRadius="5,0,0,5"/>
+                                    <TextBlock Grid.Column="0" FontFamily="{DynamicResource IconFontFamily}" VerticalAlignment="Center" 
+                                               HorizontalAlignment="Center" FontSize="14" Foreground="{DynamicResource CustomizeForeground}"
+                                               Text="{Binding Path=(attachProp:TextBoxAttachPropertyManager.TextBoxIcon),RelativeSource={RelativeSource TemplatedParent}}"/>
+                                    <TextBlock Grid.Column="1" x:Name="_placeHolder" Visibility="Collapsed" VerticalAlignment="Center" 
+                                               Foreground="{DynamicResource ForeBgColor}" 
+                                               Text="{TemplateBinding attachProp:TextBoxAttachPropertyManager.PlaceHolder}"/>
+                                    <ScrollViewer Grid.Column="1"  x:Name="PART_ContentHost" Focusable="True" VerticalAlignment="Center"
+                                                   HorizontalScrollBarVisibility="Hidden" VerticalScrollBarVisibility="Hidden"/>
+                                </Grid>
+                            </Border>
+                            <ControlTemplate.Triggers>
+                                <Trigger Property="IsMouseOver" Value="True">
+                                    <Setter Property="BorderBrush" Value="{DynamicResource HoverColor}" TargetName="_border"/>
+                                </Trigger>
+                                <DataTrigger Binding="{Binding Text,RelativeSource={RelativeSource Self}}" Value="">
+                                    <Setter Property="Visibility" Value="Visible" TargetName="_placeHolder"/>
+                                </DataTrigger>
+                            </ControlTemplate.Triggers>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+
+
+            <Style x:Key="PlaceHolderIconNoBorderTextBoxStyle" TargetType="TextBox" BasedOn="{StaticResource BaseTextBox}">
+                <Setter Property="FontFamily" Value="{DynamicResource IconFontFamily}"/>
+                <Setter Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate TargetType="TextBox">
+                            <Grid Width="{TemplateBinding Width}" Height="{TemplateBinding Height}" MinHeight="30" MinWidth="120">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="20"/>
+                                    <ColumnDefinition/>
+                                </Grid.ColumnDefinitions>
+                                <TextBlock Grid.Column="0" FontFamily="{DynamicResource IconFontFamily}" VerticalAlignment="Center" 
+                                               HorizontalAlignment="Center" FontSize="14"
+                                               Text="{Binding Path=(attachProp:TextBoxAttachPropertyManager.TextBoxIcon),
+                                        RelativeSource={RelativeSource TemplatedParent}}"/>
+                                <Grid Grid.Column="1">
+                                    <Border x:Name="_border"  BorderBrush="{DynamicResource BorderColor}" 
+                                        BorderThickness="0,0,0,0.8"/>
+                                    <TextBlock x:Name="_placeHolder" Visibility="Collapsed" VerticalAlignment="Center" 
+                                                   Foreground="{DynamicResource ForeBgColor}" 
+                                                   Text="{TemplateBinding attachProp:TextBoxAttachPropertyManager.PlaceHolder}"/>
+                                    <ScrollViewer  x:Name="PART_ContentHost" Focusable="True" VerticalAlignment="Center"
+                                                               HorizontalScrollBarVisibility="Hidden" VerticalScrollBarVisibility="Hidden"/>
+                                </Grid>
+                            </Grid>
+                            <ControlTemplate.Triggers>
+                                <Trigger Property="IsMouseOver" Value="True">
+                                    <Setter Property="BorderBrush" Value="{DynamicResource HoverColor}" TargetName="_border"/>
+                                </Trigger>
+                                <DataTrigger Binding="{Binding Text,RelativeSource={RelativeSource Self}}" Value="">
+                                    <Setter Property="Visibility" Value="Visible" TargetName="_placeHolder"/>
+                                </DataTrigger>
+                            </ControlTemplate.Triggers>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+
+
+
+
+            <Style x:Key="BasePlaceHolderTextBoxStyle" TargetType="{x:Type TextBox}" BasedOn="{StaticResource BaseTextBox}">
+                <Setter Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate TargetType="TextBox">
+                            <Border x:Name="_border" Width="{TemplateBinding Width}" Height="{TemplateBinding Height}"
+                                    CornerRadius="{TemplateBinding attachProp:TextBoxAttachPropertyManager.TextBoxCornerRadius}"
+                                    MinHeight="30" MinWidth="100"
+                                    BorderBrush="{DynamicResource BorderColor}" BorderThickness="{TemplateBinding BorderThickness}" Padding="5,2">
+                                <Grid>
+                                    <TextBlock x:Name="_placeHolder" Visibility="Collapsed" VerticalAlignment="Center" 
+                                               Foreground="{DynamicResource ForeBgColor}" 
+                                               Text="{Binding Path=(attachProp:TextBoxAttachPropertyManager.PlaceHolder),
+                                    RelativeSource={RelativeSource TemplatedParent}}"/>
+                                    <ScrollViewer  x:Name="PART_ContentHost" Focusable="True" VerticalAlignment="Center"
+                                               HorizontalScrollBarVisibility="Hidden" VerticalScrollBarVisibility="Hidden"/>
+                                </Grid>
+                            </Border>
+                            <ControlTemplate.Triggers>
+                                <Trigger Property="IsMouseOver" Value="True">
+                                    <Setter Property="BorderBrush" Value="{DynamicResource HoverColor}" TargetName="_border"></Setter>
+                                </Trigger>
+                                <DataTrigger Binding="{Binding Text,RelativeSource={RelativeSource Self}}" Value="">
+                                    <Setter Property="Visibility" Value="Visible" TargetName="_placeHolder"/>
+                                </DataTrigger>
+                            </ControlTemplate.Triggers>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+
+            <Style x:Key="PlaceHolderTextBoxStyle" TargetType="{x:Type TextBox}" BasedOn="{StaticResource BasePlaceHolderTextBoxStyle}">
+                <Setter Property="BorderThickness" Value="0.8"/>
+                <Setter Property="attachProp:TextBoxAttachPropertyManager.TextBoxCornerRadius" Value="5"/>
+            </Style>
+
+            <Style x:Key="PlaceHolderNoBorderTextBoxStyle" TargetType="{x:Type TextBox}" BasedOn="{StaticResource BasePlaceHolderTextBoxStyle}">
+                <Setter Property="BorderThickness" Value="0,0,0,0.8"/>
+            </Style>
+
+
         </ResourceDictionary>
     </ResourceDictionary.MergedDictionaries>
 </ResourceDictionary>

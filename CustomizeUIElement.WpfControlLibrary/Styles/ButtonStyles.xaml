@@ -1,6 +1,6 @@
 ﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-                    xmlns:attachProp="clr-namespace:CustomizeUIElement.WpfControlLibrary.AttachPropertys;assembly=CustomizeUIElement.WpfControlLibrary">
+                    xmlns:attachProp="clr-namespace:CustomizeUIElement.WpfControlLibrary.AttachPropertys">
     <ResourceDictionary.MergedDictionaries>
         <ResourceDictionary Source="pack://application:,,,/CustomizeUIElement.WpfControlLibrary;component/Styles/ThemeStyles.xaml"/>
         <ResourceDictionary>
