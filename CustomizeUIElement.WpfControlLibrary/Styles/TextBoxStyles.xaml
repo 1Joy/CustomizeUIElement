@@ -1,7 +1,9 @@
 ﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
                     xmlns:attachProp="clr-namespace:CustomizeUIElement.WpfControlLibrary.AttachPropertys"
+                    xmlns:converters ="clr-namespace:CustomizeUIElement.WpfControlLibrary.Converters"
                     >
+    <converters:TextBoxIconVisibilityConverter x:Key="TextBoxIconVisibilityConverter" />
     <ResourceDictionary.MergedDictionaries>
         <ResourceDictionary Source="pack://application:,,,/CustomizeUIElement.WpfControlLibrary;component/Styles/ThemeStyles.xaml"/>
         <ResourceDictionary>
@@ -183,6 +185,48 @@
             </Style>
 
 
+            <Style x:Key="BaseTextBoxWithClearBtnStyle" TargetType="{x:Type TextBox}" BasedOn="{StaticResource BaseTextBox}">
+                <Setter Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate TargetType="TextBox">
+                            <Border x:Name="_border" Width="{TemplateBinding Width}" Height="{TemplateBinding Height}"
+                                    CornerRadius="{TemplateBinding attachProp:TextBoxAttachPropertyManager.TextBoxCornerRadius}"
+                                    MinHeight="30" MinWidth="150"
+                                    BorderBrush="{DynamicResource BorderColor}" BorderThickness="{TemplateBinding BorderThickness}" Padding="5">
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="Auto"/>
+                                        <ColumnDefinition/>
+                                        <ColumnDefinition Width="20"/>
+                                    </Grid.ColumnDefinitions>
+                                    <Border Grid.Column="0" Width="15" BorderThickness="0,0,0.5,0" BorderBrush="{DynamicResource BorderColor}"
+                                            Padding="0,0,2,0" Margin="0,0,2,0" >
+                                        <TextBlock FontFamily="{DynamicResource IconFontFamily}" VerticalAlignment="Center"
+                                               FontSize="14" Foreground="{DynamicResource CustomizeForeground1}"
+                                                   Text="{TemplateBinding attachProp:TextBoxAttachPropertyManager.TextBoxIcon}"/>
+                                    </Border>
+                                    <TextBlock Grid.Column="1" x:Name="_placeHolder" Visibility="Collapsed" VerticalAlignment="Center" 
+                                               Foreground="{DynamicResource ForeBgColor}" 
+                                               Text="{Binding Path=(attachProp:TextBoxAttachPropertyManager.PlaceHolder),
+                                    RelativeSource={RelativeSource TemplatedParent}}"/>
+                                    <ScrollViewer Grid.Column="1"  x:Name="PART_ContentHost" Focusable="True" VerticalAlignment="Center"
+                                               HorizontalScrollBarVisibility="Hidden" VerticalScrollBarVisibility="Hidden"/>
+                                    <Button Grid.Column="2" Width="19" Height="19" Style="{DynamicResource DefaultTextButtonStyle}" Content="&#xe695;"
+                                            />
+                                </Grid>
+                            </Border>
+                            <ControlTemplate.Triggers>
+                                <Trigger Property="IsMouseOver" Value="True">
+                                    <Setter Property="BorderBrush" Value="{DynamicResource HoverColor}" TargetName="_border"></Setter>
+                                </Trigger>
+                                <DataTrigger Binding="{Binding Text,RelativeSource={RelativeSource Self}}" Value="">
+                                    <Setter Property="Visibility" Value="Visible" TargetName="_placeHolder"/>
+                                </DataTrigger>
+                            </ControlTemplate.Triggers>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+            </Style>
         </ResourceDictionary>
     </ResourceDictionary.MergedDictionaries>
 </ResourceDictionary>

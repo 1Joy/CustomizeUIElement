@@ -56,7 +56,7 @@
             <UniformGrid Columns="5" >
                 <TextBox attachProp:TextBoxAttachPropertyManager.PlaceHolder="请输入通讯地址"
                          attachProp:TextBoxAttachPropertyManager.TextBoxIcon="&#xe717;"
-                         Style="{DynamicResource PlaceHolderIconTextBoxStyle}" 
+                         Style="{DynamicResource BaseTextBoxWithClearBtnStyle}" 
                          Width="150" Height="30" />
             </UniformGrid>
         </StackPanel>   
