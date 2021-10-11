@@ -10,27 +10,27 @@
         <StackPanel>
             <TextBlock Text="TextBox:" Margin="10" FontSize="20"/>
             <UniformGrid Columns="5" >
-                <TextBox Style="{DynamicResource DefaultTextBoxStyle}" Width="150" Height="30" />
+                <TextBox Style="{DynamicResource DeafultTextBoxWithClearBtnStyle}" Width="150" Height="30" />
+                <TextBox Style="{DynamicResource DeafultTextBoxWithClearBtnStyle}" Width="150" Height="30" IsEnabled="False"/>
             </UniformGrid>
 
             <TextBlock Text="icon TextBox:" Margin="10" FontSize="20"/>
             <UniformGrid Columns="5" >
-                <TextBox attachProp:TextBoxAttachPropertyManager.TextBoxIcon="&#xe717;" Style="{DynamicResource PlaceHolderIconTextBoxStyle}" 
+                <TextBox attachProp:TextBoxAttachPropertyManager.TextBoxIcon="&#xe717;" Style="{DynamicResource DeafultTextBoxWithClearBtnStyle}" 
                          Width="150" Height="30"  />
 
                 <TextBox attachProp:TextBoxAttachPropertyManager.TextBoxIcon="&#xe717;" Style="{DynamicResource PlaceHolderIconBgTextBoxStyle}" 
                          Width="150" Height="30"  />
-
-                <TextBox attachProp:TextBoxAttachPropertyManager.TextBoxIcon="&#xe717;" Style="{DynamicResource PlaceHolderIconNoBorderTextBoxStyle}" 
+                <TextBox attachProp:TextBoxAttachPropertyManager.TextBoxIcon="&#xe717;" Style="{DynamicResource BottomLineTextBoxWithClearBtnStyle}" 
                          Width="150" Height="30"  />
             </UniformGrid>
 
             <TextBlock Text="placeholder TextBox:" Margin="10" FontSize="20"/>
             <UniformGrid Columns="5" >
-                <TextBox attachProp:TextBoxAttachPropertyManager.PlaceHolder="请输入通讯地址" Style="{DynamicResource PlaceHolderTextBoxStyle}" 
+                <TextBox attachProp:TextBoxAttachPropertyManager.PlaceHolder="请输入通讯地址" Style="{DynamicResource DeafultTextBoxWithClearBtnStyle}" 
                          Width="150" Height="30"  />
 
-                <TextBox attachProp:TextBoxAttachPropertyManager.PlaceHolder="请输入通讯地址" Style="{DynamicResource PlaceHolderNoBorderTextBoxStyle}" 
+                <TextBox attachProp:TextBoxAttachPropertyManager.PlaceHolder="请输入通讯地址" Style="{DynamicResource BottomLineTextBoxWithClearBtnStyle}" 
                          Width="150" Height="30"  />
             </UniformGrid>
 
@@ -38,7 +38,7 @@
             <UniformGrid Columns="5" >
                 <TextBox attachProp:TextBoxAttachPropertyManager.PlaceHolder="请输入通讯地址"
                          attachProp:TextBoxAttachPropertyManager.TextBoxIcon="&#xe717;"
-                         Style="{DynamicResource PlaceHolderIconTextBoxStyle}" 
+                         Style="{DynamicResource DeafultTextBoxWithClearBtnStyle}" 
                          Width="150" Height="30" />
 
                 <TextBox attachProp:TextBoxAttachPropertyManager.TextBoxIcon="&#xe717;"
@@ -48,7 +48,7 @@
 
                 <TextBox attachProp:TextBoxAttachPropertyManager.TextBoxIcon="&#xe717;"
                          attachProp:TextBoxAttachPropertyManager.PlaceHolder="请输入通讯地址"
-                         Style="{DynamicResource PlaceHolderIconNoBorderTextBoxStyle}" 
+                         Style="{DynamicResource BottomLineTextBoxWithClearBtnStyle}" 
                          Width="150" Height="30"  />
             </UniformGrid>
 
@@ -56,7 +56,20 @@
             <UniformGrid Columns="5" >
                 <TextBox attachProp:TextBoxAttachPropertyManager.PlaceHolder="请输入通讯地址"
                          attachProp:TextBoxAttachPropertyManager.TextBoxIcon="&#xe717;"
-                         Style="{DynamicResource BaseTextBoxWithClearBtnStyle}" 
+                         attachProp:TextBoxAttachPropertyManager.HasClearBtn="True"
+                         Style="{DynamicResource DeafultTextBoxWithClearBtnStyle}"                         
+                         Width="150" Height="30" />
+                <TextBox attachProp:TextBoxAttachPropertyManager.PlaceHolder="false也没有按钮"
+                         attachProp:TextBoxAttachPropertyManager.TextBoxIcon=""
+                         attachProp:TextBoxAttachPropertyManager.HasClearBtn="False"
+                         Style="{DynamicResource DeafultTextBoxWithClearBtnStyle}"                         
+                         Width="150" Height="30" />
+                <TextBox attachProp:TextBoxAttachPropertyManager.PlaceHolder="默认没有按钮"
+                         Style="{DynamicResource DeafultTextBoxWithClearBtnStyle}"                         
+                         Width="150" Height="30" />
+                <TextBox attachProp:TextBoxAttachPropertyManager.PlaceHolder="false也没有按钮"
+                         attachProp:TextBoxAttachPropertyManager.HasClearBtn="True"
+                         Style="{DynamicResource BottomLineTextBoxWithClearBtnStyle}"                         
                          Width="150" Height="30" />
             </UniformGrid>
         </StackPanel>   
