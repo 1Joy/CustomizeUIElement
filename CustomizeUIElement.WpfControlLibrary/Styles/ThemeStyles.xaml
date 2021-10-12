@@ -11,6 +11,6 @@
     <SolidColorBrush x:Key="HoverColor" Color="#5698c3"/>
     <SolidColorBrush x:Key="ForeBgColor" Color="#cdd1d3"/>
     <SolidColorBrush x:Key="BorderColor" Color="#5e616d"/>
-    <SolidColorBrush x:Key="DisableColor" Color="Gray"/>
+    <SolidColorBrush x:Key="DisableColor" Color="#f5f5f5"/>
 
 </ResourceDictionary>

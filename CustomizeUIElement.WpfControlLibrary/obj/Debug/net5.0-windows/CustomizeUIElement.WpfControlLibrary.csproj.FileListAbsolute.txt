@@ -18,3 +18,4 @@ D:\Code\JoyCode\CustomizeUIElement\CustomizeUIElement.WpfControlLibrary\obj\Debu
 D:\Code\JoyCode\CustomizeUIElement\CustomizeUIElement.WpfControlLibrary\obj\Debug\net5.0-windows\ref\CustomizeUIElement.WpfControlLibrary.dll
 D:\Code\JoyCode\CustomizeUIElement\CustomizeUIElement.WpfControlLibrary\obj\Debug\net5.0-windows\CustomizeUIElement.WpfControlLibrary.pdb
 D:\Code\JoyCode\CustomizeUIElement\CustomizeUIElement.WpfControlLibrary\obj\Debug\net5.0-windows\GeneratedInternalTypeHelper.g.cs
+D:\Code\JoyCode\CustomizeUIElement\CustomizeUIElement.WpfControlLibrary\obj\Debug\net5.0-windows\CustomizeUIElement.WpfControlLibrary.csprojAssemblyReference.cache

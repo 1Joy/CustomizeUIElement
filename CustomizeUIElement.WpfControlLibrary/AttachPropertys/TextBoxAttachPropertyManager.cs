@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
+using System.Windows.Controls;
 
 namespace CustomizeUIElement.WpfControlLibrary.AttachPropertys
 {
@@ -73,9 +74,42 @@ namespace CustomizeUIElement.WpfControlLibrary.AttachPropertys
 
         // Using a DependencyProperty as the backing store for HasClearBtn.  This enables animation, styling, binding, etc...
         public static readonly DependencyProperty HasClearBtnProperty =
-            DependencyProperty.RegisterAttached("HasClearBtn", typeof(bool), typeof(TextBoxAttachPropertyManager), new PropertyMetadata(false));
+            DependencyProperty.RegisterAttached("HasClearBtn", typeof(bool), typeof(TextBoxAttachPropertyManager), new PropertyMetadata(false,HasClearButtonChanged));
+
+        /// <summary>
+        /// 属性变化时触发
+        /// </summary>
+        /// <param name="d"></param>
+        /// <param name="e"></param>
+        private static void HasClearButtonChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)
+        {
+            var sender = d as Control;
+            if (sender is null)
+                return;
+            if (sender.IsLoaded)
+                SetClearHandler(sender);
+            else
+                sender.Loaded +=(s,e)=>SetClearHandler(sender);
+        }
 
 
+        private static void SetClearHandler(Control box)
+        {
+            var hasClearBtn = GetHasClearBtn(box);
+            var clearButton = box.Template.FindName("_clearBtn", box) as Button;
+            if (clearButton != null)
+            {
+                RoutedEventHandler handler = (sender, args) =>
+                {
+                    (box as TextBox)?.SetCurrentValue(TextBox.TextProperty, null);
+                    
+                };
+                if (hasClearBtn)
+                    clearButton.Click += handler;
+                else
+                    clearButton.Click -= handler;
+            }
+        }
         #endregion
     }
 }
