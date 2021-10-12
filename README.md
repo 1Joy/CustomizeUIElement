@@ -9,5 +9,7 @@ WPF自定义UI
 
    ![image](https://cdn.jsdelivr.net/gh/1Joy/CustomizeUIElement@main/imgs/textBox.JPG)
 
-3. 
+3. **PasswordBox:**
+
+4. 
 

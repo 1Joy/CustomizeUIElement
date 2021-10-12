@@ -15,6 +15,9 @@
             <TabItem Header="TextBox">
                 <local:UCTextBoxView/>
             </TabItem>
+            <TabItem Header="PasswordBox">
+                <local:UCPasswordBoxView/>
+            </TabItem>
         </TabControl>
         
     </Grid>

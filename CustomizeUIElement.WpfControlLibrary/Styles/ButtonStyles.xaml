@@ -35,6 +35,7 @@
                                     <Setter Property="Width" Value="31" TargetName="_border"/>
                                     <Setter Property="Height" Value="31" TargetName="_border"/>
                                     <Setter Property="Background" Value="{DynamicResource HoverColor}" TargetName="_border"/>
+                                    <Setter Property="Foreground" Value="{DynamicResource CustomizeForeground}"/>
                                 </Trigger>
                                 <Trigger Property="IsEnabled" Value="False">
                                     <Setter Property="Background" Value="{DynamicResource ShadowColor}" TargetName="_border"/>

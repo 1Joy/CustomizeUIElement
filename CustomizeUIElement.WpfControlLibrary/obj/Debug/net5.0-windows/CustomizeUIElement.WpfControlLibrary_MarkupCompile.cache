@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET5_0;NETCOREAPP
 
-4169965751
+51694001825
 
 5-420079220
 193-1891726104
-Styles\ButtonStyles.xaml;Styles\TextBoxStyles.xaml;Styles\ThemeStyles.xaml;UserControl1.xaml;
+Styles\ButtonStyles.xaml;Styles\PasswordBoxStyles.xaml;Styles\TextBoxStyles.xaml;Styles\ThemeStyles.xaml;UserControl1.xaml;
 
 False
 
