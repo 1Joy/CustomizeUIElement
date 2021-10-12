@@ -100,7 +100,7 @@
                             <Border x:Name="_border" Width="{TemplateBinding Width}" Height="{TemplateBinding Height}"
                                     CornerRadius="{TemplateBinding attachProp:TextBoxAttachPropertyManager.TextBoxCornerRadius}"
                                     MinHeight="30" MinWidth="150"
-                                    BorderBrush="{DynamicResource BorderColor}" BorderThickness="{TemplateBinding BorderThickness}" Padding="2,5,2,5">
+                                    BorderBrush="{DynamicResource BorderColor}" BorderThickness="{TemplateBinding BorderThickness}" Padding="0,4">
                                 <Grid>
                                     <Grid.ColumnDefinitions>
                                         <ColumnDefinition Width="Auto"/>
@@ -160,6 +160,71 @@
                 <Setter Property="BorderThickness" Value="0,0,0,0.8"/>
             </Style>
 
+            
+
+
+            <Style x:Key="BaseTextBoxBgWithClearBtnStyle" TargetType="{x:Type TextBox}" BasedOn="{StaticResource BaseTextBox}">
+                <Setter Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate TargetType="TextBox">
+                            <Border x:Name="_border" Width="{TemplateBinding Width}" Height="{TemplateBinding Height}"
+                                    CornerRadius="{TemplateBinding attachProp:TextBoxAttachPropertyManager.TextBoxCornerRadius}"
+                                    MinHeight="30" MinWidth="150"
+                                    BorderBrush="{DynamicResource BorderColor}" BorderThickness="{TemplateBinding BorderThickness}">
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="Auto"/>
+                                        <ColumnDefinition/>
+                                        <ColumnDefinition Width="Auto"/>
+                                    </Grid.ColumnDefinitions>
+                                    <Border Grid.Column="0" Width="25" BorderThickness="0"  Margin="0,0,2,0" CornerRadius="5,0,0,5"
+                                            Background="{DynamicResource ForeBgColor}"
+                                            Visibility="{TemplateBinding attachProp:TextBoxAttachPropertyManager.TextBoxIcon,
+                                        Converter={StaticResource TBIconVisibilityConverter}}">
+                                        <TextBlock FontFamily="{DynamicResource IconFontFamily}" VerticalAlignment="Center" HorizontalAlignment="Center"
+                                               FontSize="14" Foreground="{DynamicResource CustomizeForeground}"
+                                                   Text="{TemplateBinding attachProp:TextBoxAttachPropertyManager.TextBoxIcon}"/>
+                                    </Border>
+                                    <TextBlock Grid.Column="1" x:Name="_placeHolder" VerticalAlignment="Center" 
+                                               Foreground="{DynamicResource ForeBgColor}" 
+                                               Text="{Binding Path=(attachProp:TextBoxAttachPropertyManager.PlaceHolder),
+                                    RelativeSource={RelativeSource TemplatedParent}}">
+                                        <TextBlock.Visibility>
+                                            <MultiBinding Converter="{StaticResource TBPlaceHolderVisibilityConverter}">
+                                                <Binding RelativeSource="{RelativeSource TemplatedParent}" Path="(attachProp:TextBoxAttachPropertyManager.PlaceHolder)"/>
+                                                <Binding RelativeSource="{RelativeSource TemplatedParent}" Path="Text"/>
+                                            </MultiBinding>
+                                        </TextBlock.Visibility>
+                                    </TextBlock>
+                                    <ScrollViewer Grid.Column="1"  x:Name="PART_ContentHost" Focusable="True" VerticalAlignment="Center"
+                                               HorizontalScrollBarVisibility="Hidden" VerticalScrollBarVisibility="Hidden"/>
+                                    <Button x:Name="_clearBtn" Grid.Column="2" Width="19" Height="19" Style="{DynamicResource DefaultTextButtonStyle}"
+                                            Content="&#xe695;"
+                                            Visibility="{TemplateBinding attachProp:TextBoxAttachPropertyManager.HasClearBtn,
+                                        Converter={StaticResource TBClearBtnVisibilityConverter}}"
+                                            />
+                                </Grid>
+                            </Border>
+                            <ControlTemplate.Triggers>
+                                <Trigger Property="IsMouseOver" Value="True">
+                                    <Setter Property="BorderBrush" Value="{DynamicResource HoverColor}" TargetName="_border"></Setter>
+                                </Trigger>
+                                <Trigger Property="IsEnabled" Value="False">
+                                    <Setter Property="Background" Value="{DynamicResource DisableColor}" TargetName="_border"/>
+                                </Trigger>
+                                <DataTrigger Binding="{Binding Text,RelativeSource={RelativeSource Self}}" Value="">
+                                    <Setter Property="Visibility" Value="Visible" TargetName="_placeHolder"/>
+                                </DataTrigger>
+                            </ControlTemplate.Triggers>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+
+            <Style x:Key="DeafultTextBoxBgWithClearBtnStyle" TargetType="{x:Type TextBox}" BasedOn="{StaticResource BaseTextBoxBgWithClearBtnStyle}">
+                <Setter Property="BorderThickness" Value="0.8"/>
+                <Setter Property="attachProp:TextBoxAttachPropertyManager.TextBoxCornerRadius" Value="5"/>
+            </Style>
 
 
 

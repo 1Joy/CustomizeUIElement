@@ -18,8 +18,7 @@
             <UniformGrid Columns="5" >
                 <TextBox attachProp:TextBoxAttachPropertyManager.TextBoxIcon="&#xe717;" Style="{DynamicResource DeafultTextBoxWithClearBtnStyle}" 
                          Width="150" Height="30"  />
-
-                <TextBox attachProp:TextBoxAttachPropertyManager.TextBoxIcon="&#xe717;" Style="{DynamicResource PlaceHolderIconBgTextBoxStyle}" 
+                <TextBox attachProp:TextBoxAttachPropertyManager.TextBoxIcon="&#xe717;" Style="{DynamicResource DeafultTextBoxBgWithClearBtnStyle}" 
                          Width="150" Height="30"  />
                 <TextBox attachProp:TextBoxAttachPropertyManager.TextBoxIcon="&#xe717;" Style="{DynamicResource BottomLineTextBoxWithClearBtnStyle}" 
                          Width="150" Height="30"  />
@@ -43,7 +42,7 @@
 
                 <TextBox attachProp:TextBoxAttachPropertyManager.TextBoxIcon="&#xe717;"
                          attachProp:TextBoxAttachPropertyManager.PlaceHolder="请输入通讯地址"
-                         Style="{DynamicResource PlaceHolderIconBgTextBoxStyle}" 
+                         Style="{DynamicResource DeafultTextBoxBgWithClearBtnStyle}" 
                          Width="150" Height="30"  />
 
                 <TextBox attachProp:TextBoxAttachPropertyManager.TextBoxIcon="&#xe717;"
@@ -71,6 +70,11 @@
                          attachProp:TextBoxAttachPropertyManager.HasClearBtn="True"
                          Style="{DynamicResource BottomLineTextBoxWithClearBtnStyle}"                         
                          Width="150" Height="30" />
+                <TextBox attachProp:TextBoxAttachPropertyManager.TextBoxIcon="&#xe717;"
+                         attachProp:TextBoxAttachPropertyManager.PlaceHolder="请输入通讯地址"
+                         attachProp:TextBoxAttachPropertyManager.HasClearBtn="True"
+                         Style="{DynamicResource DeafultTextBoxBgWithClearBtnStyle}" 
+                         Width="150" Height="30"  />
             </UniformGrid>
         </StackPanel>   
     </Grid>
