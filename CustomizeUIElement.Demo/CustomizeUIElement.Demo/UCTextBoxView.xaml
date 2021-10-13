@@ -16,63 +16,63 @@
 
             <TextBlock Text="icon TextBox:" Margin="10" FontSize="20"/>
             <UniformGrid Columns="5" >
-                <TextBox attachProp:TextBoxAttachPropertyManager.TextBoxIcon="&#xe717;" Style="{DynamicResource DeafultTextBoxWithClearBtnStyle}" 
+                <TextBox attachProp:InputBoxAttachPropertyManager.TextBoxIcon="&#xe717;" Style="{DynamicResource DeafultTextBoxWithClearBtnStyle}" 
                          Width="150" Height="30"  />
-                <TextBox attachProp:TextBoxAttachPropertyManager.TextBoxIcon="&#xe717;" Style="{DynamicResource DeafultTextBoxBgWithClearBtnStyle}" 
+                <TextBox attachProp:InputBoxAttachPropertyManager.TextBoxIcon="&#xe717;" Style="{DynamicResource DeafultTextBoxBgWithClearBtnStyle}" 
                          Width="150" Height="30"  />
-                <TextBox attachProp:TextBoxAttachPropertyManager.TextBoxIcon="&#xe717;" Style="{DynamicResource BottomLineTextBoxWithClearBtnStyle}" 
+                <TextBox attachProp:InputBoxAttachPropertyManager.TextBoxIcon="&#xe717;" Style="{DynamicResource BottomLineTextBoxWithClearBtnStyle}" 
                          Width="150" Height="30"  />
             </UniformGrid>
 
             <TextBlock Text="placeholder TextBox:" Margin="10" FontSize="20"/>
             <UniformGrid Columns="5" >
-                <TextBox attachProp:TextBoxAttachPropertyManager.PlaceHolder="请输入通讯地址" Style="{DynamicResource DeafultTextBoxWithClearBtnStyle}" 
+                <TextBox attachProp:InputBoxAttachPropertyManager.PlaceHolder="请输入通讯地址" Style="{DynamicResource DeafultTextBoxWithClearBtnStyle}" 
                          Width="150" Height="30"  />
 
-                <TextBox attachProp:TextBoxAttachPropertyManager.PlaceHolder="请输入通讯地址" Style="{DynamicResource BottomLineTextBoxWithClearBtnStyle}" 
+                <TextBox attachProp:InputBoxAttachPropertyManager.PlaceHolder="请输入通讯地址" Style="{DynamicResource BottomLineTextBoxWithClearBtnStyle}" 
                          Width="150" Height="30"  />
             </UniformGrid>
 
             <TextBlock Text="placeholder and icon TextBox:" Margin="10" FontSize="20"/>
             <UniformGrid Columns="5" >
-                <TextBox attachProp:TextBoxAttachPropertyManager.PlaceHolder="请输入通讯地址"
-                         attachProp:TextBoxAttachPropertyManager.TextBoxIcon="&#xe717;"
+                <TextBox attachProp:InputBoxAttachPropertyManager.PlaceHolder="请输入通讯地址"
+                         attachProp:InputBoxAttachPropertyManager.TextBoxIcon="&#xe717;"
                          Style="{DynamicResource DeafultTextBoxWithClearBtnStyle}" 
                          Width="150" Height="30" />
 
-                <TextBox attachProp:TextBoxAttachPropertyManager.TextBoxIcon="&#xe717;"
-                         attachProp:TextBoxAttachPropertyManager.PlaceHolder="请输入通讯地址"
+                <TextBox attachProp:InputBoxAttachPropertyManager.TextBoxIcon="&#xe717;"
+                         attachProp:InputBoxAttachPropertyManager.PlaceHolder="请输入通讯地址"
                          Style="{DynamicResource DeafultTextBoxBgWithClearBtnStyle}" 
                          Width="150" Height="30"  />
 
-                <TextBox attachProp:TextBoxAttachPropertyManager.TextBoxIcon="&#xe717;"
-                         attachProp:TextBoxAttachPropertyManager.PlaceHolder="请输入通讯地址"
+                <TextBox attachProp:InputBoxAttachPropertyManager.TextBoxIcon="&#xe717;"
+                         attachProp:InputBoxAttachPropertyManager.PlaceHolder="请输入通讯地址"
                          Style="{DynamicResource BottomLineTextBoxWithClearBtnStyle}" 
                          Width="150" Height="30"  />
             </UniformGrid>
 
             <TextBlock Text="TextBox clearBtn:" Margin="10" FontSize="20"/>
             <UniformGrid Columns="5" >
-                <TextBox attachProp:TextBoxAttachPropertyManager.PlaceHolder="请输入通讯地址"
-                         attachProp:TextBoxAttachPropertyManager.TextBoxIcon="&#xe717;"
-                         attachProp:TextBoxAttachPropertyManager.HasClearBtn="True"
+                <TextBox attachProp:InputBoxAttachPropertyManager.PlaceHolder="请输入通讯地址"
+                         attachProp:InputBoxAttachPropertyManager.TextBoxIcon="&#xe717;"
+                         attachProp:InputBoxAttachPropertyManager.HasClearBtn="True"
                          Style="{DynamicResource DeafultTextBoxWithClearBtnStyle}"                         
                          Width="150" Height="30" />
-                <TextBox attachProp:TextBoxAttachPropertyManager.PlaceHolder="false也没有按钮"
-                         attachProp:TextBoxAttachPropertyManager.TextBoxIcon=""
-                         attachProp:TextBoxAttachPropertyManager.HasClearBtn="False"
+                <TextBox attachProp:InputBoxAttachPropertyManager.PlaceHolder="false也没有按钮"
+                         attachProp:InputBoxAttachPropertyManager.TextBoxIcon=""
+                         attachProp:InputBoxAttachPropertyManager.HasClearBtn="False"
                          Style="{DynamicResource DeafultTextBoxWithClearBtnStyle}"                         
                          Width="150" Height="30" />
-                <TextBox attachProp:TextBoxAttachPropertyManager.PlaceHolder="默认没有按钮"
+                <TextBox attachProp:InputBoxAttachPropertyManager.PlaceHolder="默认没有按钮"
                          Style="{DynamicResource DeafultTextBoxWithClearBtnStyle}"                         
                          Width="150" Height="30" />
-                <TextBox attachProp:TextBoxAttachPropertyManager.PlaceHolder="false也没有按钮"
-                         attachProp:TextBoxAttachPropertyManager.HasClearBtn="True"
+                <TextBox attachProp:InputBoxAttachPropertyManager.PlaceHolder="false也没有按钮"
+                         attachProp:InputBoxAttachPropertyManager.HasClearBtn="True"
                          Style="{DynamicResource BottomLineTextBoxWithClearBtnStyle}"                         
                          Width="150" Height="30" />
-                <TextBox attachProp:TextBoxAttachPropertyManager.TextBoxIcon="&#xe717;"
-                         attachProp:TextBoxAttachPropertyManager.PlaceHolder="请输入通讯地址"
-                         attachProp:TextBoxAttachPropertyManager.HasClearBtn="True"
+                <TextBox attachProp:InputBoxAttachPropertyManager.TextBoxIcon="&#xe717;"
+                         attachProp:InputBoxAttachPropertyManager.PlaceHolder="请输入通讯地址"
+                         attachProp:InputBoxAttachPropertyManager.HasClearBtn="True"
                          Style="{DynamicResource DeafultTextBoxBgWithClearBtnStyle}" 
                          Width="150" Height="30"  />
             </UniformGrid>

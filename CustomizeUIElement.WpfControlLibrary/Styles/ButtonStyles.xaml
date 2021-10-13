@@ -142,7 +142,7 @@
                                     Background="{TemplateBinding Background}" Padding="5">
                                 </Border>
                                 <TextBlock FontFamily="{TemplateBinding FontFamily}" Text="{TemplateBinding Content}" HorizontalAlignment="Center"
-                                           VerticalAlignment="Center" FontSize="15"/>
+                                           VerticalAlignment="Center" FontSize="{TemplateBinding FontSize}"/>
                             </Grid>
                         </ControlTemplate>
                     </Setter.Value>

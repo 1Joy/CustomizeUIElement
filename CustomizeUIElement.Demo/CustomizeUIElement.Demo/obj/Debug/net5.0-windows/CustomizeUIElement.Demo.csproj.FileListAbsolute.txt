@@ -1,9 +1,3 @@
-D:\Code\JoyCode\CustomizeUIElement\CustomizeUIElement.Demo\CustomizeUIElement.Demo\obj\Debug\net5.0-windows\MainWindow.g.cs
-D:\Code\JoyCode\CustomizeUIElement\CustomizeUIElement.Demo\CustomizeUIElement.Demo\obj\Debug\net5.0-windows\App.g.cs
-D:\Code\JoyCode\CustomizeUIElement\CustomizeUIElement.Demo\CustomizeUIElement.Demo\obj\Debug\net5.0-windows\GeneratedInternalTypeHelper.g.cs
-D:\Code\JoyCode\CustomizeUIElement\CustomizeUIElement.Demo\CustomizeUIElement.Demo\obj\Debug\net5.0-windows\CustomizeUIElement.Demo_MarkupCompile.cache
-D:\Code\JoyCode\CustomizeUIElement\CustomizeUIElement.Demo\CustomizeUIElement.Demo\obj\Debug\net5.0-windows\CustomizeUIElement.Demo_MarkupCompile.lref
-D:\Code\JoyCode\CustomizeUIElement\CustomizeUIElement.Demo\CustomizeUIElement.Demo\obj\Debug\net5.0-windows\CustomizeUIElement.Demo.csprojAssemblyReference.cache
 D:\Code\JoyCode\CustomizeUIElement\CustomizeUIElement.Demo\CustomizeUIElement.Demo\bin\Debug\net5.0-windows\CustomizeUIElement.Demo.exe
 D:\Code\JoyCode\CustomizeUIElement\CustomizeUIElement.Demo\CustomizeUIElement.Demo\bin\Debug\net5.0-windows\CustomizeUIElement.Demo.deps.json
 D:\Code\JoyCode\CustomizeUIElement\CustomizeUIElement.Demo\CustomizeUIElement.Demo\bin\Debug\net5.0-windows\CustomizeUIElement.Demo.runtimeconfig.json
@@ -13,11 +7,19 @@ D:\Code\JoyCode\CustomizeUIElement\CustomizeUIElement.Demo\CustomizeUIElement.De
 D:\Code\JoyCode\CustomizeUIElement\CustomizeUIElement.Demo\CustomizeUIElement.Demo\bin\Debug\net5.0-windows\CustomizeUIElement.Demo.pdb
 D:\Code\JoyCode\CustomizeUIElement\CustomizeUIElement.Demo\CustomizeUIElement.Demo\bin\Debug\net5.0-windows\CustomizeUIElement.WpfControlLibrary.dll
 D:\Code\JoyCode\CustomizeUIElement\CustomizeUIElement.Demo\CustomizeUIElement.Demo\bin\Debug\net5.0-windows\CustomizeUIElement.WpfControlLibrary.pdb
+D:\Code\JoyCode\CustomizeUIElement\CustomizeUIElement.Demo\CustomizeUIElement.Demo\obj\Debug\net5.0-windows\CustomizeUIElement.Demo.csprojAssemblyReference.cache
+D:\Code\JoyCode\CustomizeUIElement\CustomizeUIElement.Demo\CustomizeUIElement.Demo\obj\Debug\net5.0-windows\MainWindow.g.cs
 D:\Code\JoyCode\CustomizeUIElement\CustomizeUIElement.Demo\CustomizeUIElement.Demo\obj\Debug\net5.0-windows\UCButtonView.g.cs
+D:\Code\JoyCode\CustomizeUIElement\CustomizeUIElement.Demo\CustomizeUIElement.Demo\obj\Debug\net5.0-windows\UCPasswordBoxView.g.cs
 D:\Code\JoyCode\CustomizeUIElement\CustomizeUIElement.Demo\CustomizeUIElement.Demo\obj\Debug\net5.0-windows\UCTextBoxView.g.cs
+D:\Code\JoyCode\CustomizeUIElement\CustomizeUIElement.Demo\CustomizeUIElement.Demo\obj\Debug\net5.0-windows\App.g.cs
+D:\Code\JoyCode\CustomizeUIElement\CustomizeUIElement.Demo\CustomizeUIElement.Demo\obj\Debug\net5.0-windows\GeneratedInternalTypeHelper.g.cs
+D:\Code\JoyCode\CustomizeUIElement\CustomizeUIElement.Demo\CustomizeUIElement.Demo\obj\Debug\net5.0-windows\CustomizeUIElement.Demo_MarkupCompile.cache
+D:\Code\JoyCode\CustomizeUIElement\CustomizeUIElement.Demo\CustomizeUIElement.Demo\obj\Debug\net5.0-windows\CustomizeUIElement.Demo_MarkupCompile.lref
 D:\Code\JoyCode\CustomizeUIElement\CustomizeUIElement.Demo\CustomizeUIElement.Demo\obj\Debug\net5.0-windows\App.baml
 D:\Code\JoyCode\CustomizeUIElement\CustomizeUIElement.Demo\CustomizeUIElement.Demo\obj\Debug\net5.0-windows\MainWindow.baml
 D:\Code\JoyCode\CustomizeUIElement\CustomizeUIElement.Demo\CustomizeUIElement.Demo\obj\Debug\net5.0-windows\UCButtonView.baml
+D:\Code\JoyCode\CustomizeUIElement\CustomizeUIElement.Demo\CustomizeUIElement.Demo\obj\Debug\net5.0-windows\UCPasswordBoxView.baml
 D:\Code\JoyCode\CustomizeUIElement\CustomizeUIElement.Demo\CustomizeUIElement.Demo\obj\Debug\net5.0-windows\UCTextBoxView.baml
 D:\Code\JoyCode\CustomizeUIElement\CustomizeUIElement.Demo\CustomizeUIElement.Demo\obj\Debug\net5.0-windows\CustomizeUIElement.Demo.g.resources
 D:\Code\JoyCode\CustomizeUIElement\CustomizeUIElement.Demo\CustomizeUIElement.Demo\obj\Debug\net5.0-windows\CustomizeUIElement.Demo.GeneratedMSBuildEditorConfig.editorconfig
@@ -29,5 +31,3 @@ D:\Code\JoyCode\CustomizeUIElement\CustomizeUIElement.Demo\CustomizeUIElement.De
 D:\Code\JoyCode\CustomizeUIElement\CustomizeUIElement.Demo\CustomizeUIElement.Demo\obj\Debug\net5.0-windows\ref\CustomizeUIElement.Demo.dll
 D:\Code\JoyCode\CustomizeUIElement\CustomizeUIElement.Demo\CustomizeUIElement.Demo\obj\Debug\net5.0-windows\CustomizeUIElement.Demo.pdb
 D:\Code\JoyCode\CustomizeUIElement\CustomizeUIElement.Demo\CustomizeUIElement.Demo\obj\Debug\net5.0-windows\CustomizeUIElement.Demo.genruntimeconfig.cache
-D:\Code\JoyCode\CustomizeUIElement\CustomizeUIElement.Demo\CustomizeUIElement.Demo\obj\Debug\net5.0-windows\UCPasswordBoxView.g.cs
-D:\Code\JoyCode\CustomizeUIElement\CustomizeUIElement.Demo\CustomizeUIElement.Demo\obj\Debug\net5.0-windows\UCPasswordBoxView.baml

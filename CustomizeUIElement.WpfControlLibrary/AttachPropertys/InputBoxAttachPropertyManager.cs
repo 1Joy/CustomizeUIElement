@@ -8,7 +8,7 @@ using System.Windows.Controls;
 
 namespace CustomizeUIElement.WpfControlLibrary.AttachPropertys
 {
-    public static class TextBoxAttachPropertyManager
+    public static class InputBoxAttachPropertyManager
     {
         #region icon
         public static string GetTextBoxIcon(DependencyObject obj)
@@ -23,7 +23,7 @@ namespace CustomizeUIElement.WpfControlLibrary.AttachPropertys
 
         // Using a DependencyProperty as the backing store for TextBoxIcon.  This enables animation, styling, binding, etc...
         public static readonly DependencyProperty TextBoxIconProperty =
-            DependencyProperty.RegisterAttached("TextBoxIcon", typeof(string), typeof(TextBoxAttachPropertyManager), new PropertyMetadata(string.Empty));
+            DependencyProperty.RegisterAttached("TextBoxIcon", typeof(string), typeof(InputBoxAttachPropertyManager), new PropertyMetadata(string.Empty));
         #endregion
 
         #region placeholder
@@ -39,7 +39,7 @@ namespace CustomizeUIElement.WpfControlLibrary.AttachPropertys
 
         // Using a DependencyProperty as the backing store for PlaceHolder.  This enables animation, styling, binding, etc...
         public static readonly DependencyProperty PlaceHolderProperty =
-            DependencyProperty.RegisterAttached("PlaceHolder", typeof(string), typeof(TextBoxAttachPropertyManager), new PropertyMetadata(string.Empty));
+            DependencyProperty.RegisterAttached("PlaceHolder", typeof(string), typeof(InputBoxAttachPropertyManager), new PropertyMetadata(string.Empty));
         #endregion
 
         #region cornerRadius
@@ -55,7 +55,7 @@ namespace CustomizeUIElement.WpfControlLibrary.AttachPropertys
 
         // Using a DependencyProperty as the backing store for TextBoxCornerRadius.  This enables animation, styling, binding, etc...
         public static readonly DependencyProperty TextBoxCornerRadiusProperty =
-            DependencyProperty.RegisterAttached("TextBoxCornerRadius", typeof(CornerRadius), typeof(TextBoxAttachPropertyManager), new PropertyMetadata(default(CornerRadius)));
+            DependencyProperty.RegisterAttached("TextBoxCornerRadius", typeof(CornerRadius), typeof(InputBoxAttachPropertyManager), new PropertyMetadata(default(CornerRadius)));
 
         #endregion
 
@@ -74,7 +74,7 @@ namespace CustomizeUIElement.WpfControlLibrary.AttachPropertys
 
         // Using a DependencyProperty as the backing store for HasClearBtn.  This enables animation, styling, binding, etc...
         public static readonly DependencyProperty HasClearBtnProperty =
-            DependencyProperty.RegisterAttached("HasClearBtn", typeof(bool), typeof(TextBoxAttachPropertyManager), new PropertyMetadata(false,HasClearButtonChanged));
+            DependencyProperty.RegisterAttached("HasClearBtn", typeof(bool), typeof(InputBoxAttachPropertyManager), new PropertyMetadata(false, HasClearButtonChanged));
 
         /// <summary>
         /// 属性变化时触发
@@ -89,7 +89,7 @@ namespace CustomizeUIElement.WpfControlLibrary.AttachPropertys
             if (sender.IsLoaded)
                 SetClearHandler(sender);
             else
-                sender.Loaded +=(s,e)=>SetClearHandler(sender);
+                sender.Loaded += (s, e) => SetClearHandler(sender);
         }
 
 
@@ -102,7 +102,7 @@ namespace CustomizeUIElement.WpfControlLibrary.AttachPropertys
                 RoutedEventHandler handler = (sender, args) =>
                 {
                     (box as TextBox)?.SetCurrentValue(TextBox.TextProperty, null);
-                    
+
                 };
                 if (hasClearBtn)
                     clearButton.Click += handler;
@@ -110,6 +110,72 @@ namespace CustomizeUIElement.WpfControlLibrary.AttachPropertys
                     clearButton.Click -= handler;
             }
         }
+        #endregion
+
+        #region 密码
+        public static readonly DependencyProperty PasswordProperty =DependencyProperty.RegisterAttached("Password",typeof(string), typeof(InputBoxAttachPropertyManager),new FrameworkPropertyMetadata(string.Empty, OnPasswordPropertyChanged));
+        public static readonly DependencyProperty AttachProperty =DependencyProperty.RegisterAttached("Attach",typeof(bool), typeof(InputBoxAttachPropertyManager), new PropertyMetadata(false, Attach));
+        private static readonly DependencyProperty IsUpdatingProperty =DependencyProperty.RegisterAttached("IsUpdating", typeof(bool),
+           typeof(InputBoxAttachPropertyManager));
+
+        public static void SetAttach(DependencyObject dp, bool value)
+        {
+            dp.SetValue(AttachProperty, value);
+        }
+        public static bool GetAttach(DependencyObject dp)
+        {
+            return (bool)dp.GetValue(AttachProperty);
+        }
+        public static string GetPassword(DependencyObject dp)
+        {
+            return (string)dp.GetValue(PasswordProperty);
+        }
+        public static void SetPassword(DependencyObject dp, string value)
+        {
+            dp.SetValue(PasswordProperty, value);
+        }
+        private static bool GetIsUpdating(DependencyObject dp)
+        {
+            return (bool)dp.GetValue(IsUpdatingProperty);
+        }
+        private static void SetIsUpdating(DependencyObject dp, bool value)
+        {
+            dp.SetValue(IsUpdatingProperty, value);
+        }
+        private static void OnPasswordPropertyChanged(DependencyObject sender,
+            DependencyPropertyChangedEventArgs e)
+        {
+            PasswordBox passwordBox = sender as PasswordBox;
+            passwordBox.PasswordChanged -= PasswordChanged;
+            if (!(bool)GetIsUpdating(passwordBox))
+            {
+                passwordBox.Password = (string)e.NewValue;
+            }
+            passwordBox.PasswordChanged += PasswordChanged;
+        }
+        private static void Attach(DependencyObject sender,
+            DependencyPropertyChangedEventArgs e)
+        {
+            PasswordBox passwordBox = sender as PasswordBox;
+            if (passwordBox == null)
+                return;
+            if ((bool)e.OldValue)
+            {
+                passwordBox.PasswordChanged -= PasswordChanged;
+            }
+            if ((bool)e.NewValue)
+            {
+                passwordBox.PasswordChanged += PasswordChanged;
+            }
+        }
+        private static void PasswordChanged(object sender, RoutedEventArgs e)
+        {
+            PasswordBox passwordBox = sender as PasswordBox;
+            SetIsUpdating(passwordBox, true);
+            SetPassword(passwordBox, passwordBox.Password);
+            SetIsUpdating(passwordBox, false);
+        }
+
         #endregion
     }
 }
