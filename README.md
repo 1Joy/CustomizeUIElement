@@ -11,5 +11,7 @@ WPF自定义UI
 
 3. **PasswordBox:**
 
+   ![image](https://cdn.jsdelivr.net/gh/1Joy/CustomizeUIElement@main/imgs/passwordBox.JPG)
+
 4. 
 
