@@ -8,8 +8,15 @@
              mc:Ignorable="d" >
     <Grid>
         <StackPanel>
-            <TextBlock Text="buttons:" Margin="10" FontSize="20"/>
+            <TextBlock Text="方形按钮:" Margin="10" FontSize="20"/>
             <UniformGrid Columns="8" Margin="10">
+                <Button Content="disable" Style="{DynamicResource aaabbb}" IsEnabled="False"/>
+                <Button Content="Default" Style="{DynamicResource aaabbb}" attachProp:ButtonAttachPropertyManager.BottonType="default"/>
+                <Button Content="Primary" Style="{DynamicResource aaabbb}" attachProp:ButtonAttachPropertyManager.BottonType="primary"/>
+                <Button Content="Success" Style="{DynamicResource aaabbb}" attachProp:ButtonAttachPropertyManager.BottonType="success"/>
+                <Button Content="Warn" Style="{DynamicResource aaabbb}" attachProp:ButtonAttachPropertyManager.BottonType="warn"/>
+                <Button Content="Error" Style="{DynamicResource aaabbb}" attachProp:ButtonAttachPropertyManager.BottonType="error"/>
+
                 <Button Style="{DynamicResource PrimaryMiniCircleButtonStyle}" Content="&#xe717;" ToolTip="PrimaryMiniButton"/>
                 <Button Style="{DynamicResource PrimaryMiniCircleButtonStyle}" Content="&#xe717;" ToolTip="PrimaryMiniButton" IsEnabled="False"/>
 

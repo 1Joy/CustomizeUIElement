@@ -18,6 +18,9 @@
             <TabItem Header="PasswordBox">
                 <local:UCPasswordBoxView/>
             </TabItem>
+            <TabItem Header="HeaderText">
+                <local:UCHeaderTextView/>
+            </TabItem>
         </TabControl>
         
     </Grid>

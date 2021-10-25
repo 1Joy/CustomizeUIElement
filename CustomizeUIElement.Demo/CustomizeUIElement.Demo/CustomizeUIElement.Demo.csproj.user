@@ -10,6 +10,9 @@
     <Compile Update="UCButtonView.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="UCHeaderTextView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="UCPasswordBoxView.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -22,6 +25,9 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="UCButtonView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="UCHeaderTextView.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="UCPasswordBoxView.xaml">

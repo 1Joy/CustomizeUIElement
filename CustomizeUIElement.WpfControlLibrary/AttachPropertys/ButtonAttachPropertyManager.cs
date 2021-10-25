@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Drawing;
 using System.Windows;
 
 namespace CustomizeUIElement.WpfControlLibrary.AttachPropertys
@@ -21,6 +17,28 @@ namespace CustomizeUIElement.WpfControlLibrary.AttachPropertys
 
         public static CornerRadius GetCornerRadius(DependencyObject element) => (CornerRadius)element.GetValue(CornerRadiusProperty);
         public static void SetCornerRadius(DependencyObject element, CornerRadius value) => element.SetValue(CornerRadiusProperty, value);
+        #endregion
+
+        #region 按钮类型 Primary Default Error Warn Success       
+
+
+
+        public static string GetBottonType(DependencyObject obj)
+        {
+            return (string)obj.GetValue(BottonTypeProperty);
+        }
+
+        public static void SetBottonType(DependencyObject obj, string value)
+        {
+            obj.SetValue(BottonTypeProperty, value);
+        }
+
+        // Using a DependencyProperty as the backing store for BottonType.  This enables animation, styling, binding, etc...
+        public static readonly DependencyProperty BottonTypeProperty =
+            DependencyProperty.RegisterAttached("BottonType", typeof(string), typeof(ButtonAttachPropertyManager), new PropertyMetadata("default"));
+
+
+
         #endregion
 
 

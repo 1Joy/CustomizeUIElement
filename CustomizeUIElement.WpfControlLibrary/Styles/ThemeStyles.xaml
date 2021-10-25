@@ -5,8 +5,9 @@
     <SolidColorBrush x:Key="CustomizeForeground" Color="#fff"/>
     <SolidColorBrush x:Key="CustomizeForeground1" Color="#000"/>
 
-    
-    <SolidColorBrush x:Key="PrimaryColor" Color="#2775b6"/>
+
+    <SolidColorBrush x:Key="PrimaryColor" Color="#1890FF"/>
+    <SolidColorBrush x:Key="PrimaryHoverColor" Color="#69c0ff"/>
     <SolidColorBrush x:Key="DefaultColor" Color="#fff"/>
     <SolidColorBrush x:Key="HoverColor" Color="#5698c3"/>
     <SolidColorBrush x:Key="ForeBgColor" Color="#cdd1d3"/>

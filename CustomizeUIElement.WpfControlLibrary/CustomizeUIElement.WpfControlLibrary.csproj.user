@@ -8,6 +8,9 @@
     <Page Update="Styles\PasswordBoxStyles.xaml">
       <SubType>Designer</SubType>
     </Page>
+    <Page Update="Styles\TextBlockStyles.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="Styles\TextBoxStyles.xaml">
       <SubType>Designer</SubType>
     </Page>
