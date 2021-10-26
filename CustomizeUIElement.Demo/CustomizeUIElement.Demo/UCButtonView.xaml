@@ -9,47 +9,52 @@
     <Grid>
         <StackPanel>
             <TextBlock Text="方形按钮:" Margin="10" FontSize="20"/>
-            <UniformGrid Columns="8" Margin="10">
-                <Button Content="disable" Style="{DynamicResource aaabbb}" IsEnabled="False"/>
-                <Button Content="Default" Style="{DynamicResource aaabbb}" attachProp:ButtonAttachPropertyManager.BottonType="default"/>
-                <Button Content="Primary" Style="{DynamicResource aaabbb}" attachProp:ButtonAttachPropertyManager.BottonType="primary"/>
-                <Button Content="Success" Style="{DynamicResource aaabbb}" attachProp:ButtonAttachPropertyManager.BottonType="success"/>
-                <Button Content="Warn" Style="{DynamicResource aaabbb}" attachProp:ButtonAttachPropertyManager.BottonType="warn"/>
-                <Button Content="Error" Style="{DynamicResource aaabbb}" attachProp:ButtonAttachPropertyManager.BottonType="error"/>
+            <UniformGrid Columns="6" Margin="10">
+                <Button Content="disable" Margin="3" Style="{DynamicResource SquareButtonStyle}" IsEnabled="False"/>
+                <Button Content="Default" Margin="3" Style="{DynamicResource SquareButtonStyle}" attachProp:ButtonAttachPropertyManager.BottonType="default"/>
+                <Button Content="Primary" Margin="3" Style="{DynamicResource SquareButtonStyle}" attachProp:ButtonAttachPropertyManager.BottonType="primary"/>
+                <Button Content="Success" Margin="3" Style="{DynamicResource SquareButtonStyle}" attachProp:ButtonAttachPropertyManager.BottonType="success"/>
+                <Button Content="Warn"  Margin="3" Style="{DynamicResource SquareButtonStyle}" attachProp:ButtonAttachPropertyManager.BottonType="warn"/>
+                <Button Content="Error" Margin="3" Style="{DynamicResource SquareButtonStyle}" attachProp:ButtonAttachPropertyManager.BottonType="error"/>
 
-                <Button Style="{DynamicResource PrimaryMiniCircleButtonStyle}" Content="&#xe717;" ToolTip="PrimaryMiniButton"/>
-                <Button Style="{DynamicResource PrimaryMiniCircleButtonStyle}" Content="&#xe717;" ToolTip="PrimaryMiniButton" IsEnabled="False"/>
 
-                <Button Style="{DynamicResource DefaultMiniCircleButtonStyle}" Content="&#xe717;"/>
+                <Button Content="&#xe717;disable" Margin="3" Style="{DynamicResource SquareButtonStyle}" IsEnabled="False"/>
+                <Button Content="&#xe717;Default" Margin="3" Style="{DynamicResource SquareButtonStyle}" attachProp:ButtonAttachPropertyManager.BottonType="default"/>
+                <Button Content="&#xe717;Primary" Margin="3" Style="{DynamicResource SquareButtonStyle}" attachProp:ButtonAttachPropertyManager.BottonType="primary"/>
+                <Button Content="&#xe717;Success" Margin="3" Style="{DynamicResource SquareButtonStyle}" attachProp:ButtonAttachPropertyManager.BottonType="success"/>
+                <Button Content="&#xe717;Warn" Margin="3" Style="{DynamicResource SquareButtonStyle}" attachProp:ButtonAttachPropertyManager.BottonType="warn"/>
+                <Button Content="&#xe717;Error" Margin="3" Style="{DynamicResource SquareButtonStyle}" attachProp:ButtonAttachPropertyManager.BottonType="error"/>
+            </UniformGrid>
+            
+            <TextBlock Text="圆形按钮:" Margin="10" FontSize="20"/>
+            <UniformGrid Columns="6" Margin="10">
+                <Button Content="&#xe717;" Style="{DynamicResource RoundButtonStyle}" IsEnabled="False"/>
+                <Button Content="&#xe717;" Style="{DynamicResource RoundButtonStyle}" attachProp:ButtonAttachPropertyManager.BottonType="default"/>
+                <Button Content="&#xe717;" Style="{DynamicResource RoundButtonStyle}" attachProp:ButtonAttachPropertyManager.BottonType="primary"/>
+                <Button Content="&#xe717;" Style="{DynamicResource RoundButtonStyle}" attachProp:ButtonAttachPropertyManager.BottonType="success"/>
+                <Button Content="&#xe717;" Style="{DynamicResource RoundButtonStyle}" attachProp:ButtonAttachPropertyManager.BottonType="warn"/>
+                <Button Content="&#xe717;" Style="{DynamicResource RoundButtonStyle}" attachProp:ButtonAttachPropertyManager.BottonType="error"/>
             </UniformGrid>
 
-            <UniformGrid Columns="8" Margin="10">
-                <Button Style="{DynamicResource PrimaryCornerButtonStyle}" Content="Primary"/>
-                <Button Style="{DynamicResource DefaultCornerButtonStyle}" Content="Default"/>
-                <Button Style="{DynamicResource DefaultBorderCornerButtonStyle}" Content="Default1"/>
-                <Button Style="{DynamicResource PrimaryCornerButtonStyle}" Content="IsEnable" IsEnabled="False"/>
-
-                <Button Style="{DynamicResource PrimaryTextButtonStyle}" Content="Text"/>
-                <Button Style="{DynamicResource DefaultTextButtonStyle}" Content="&#xe717;"/>
+            <TextBlock Text="文字按钮:" Margin="10" FontSize="20"/>
+            <UniformGrid Columns="6" Margin="10">
+                <Button Content="disable" Margin="3" Style="{DynamicResource TextButtonStyle}" IsEnabled="False"/>
+                <Button Content="Default" Margin="3" Style="{DynamicResource TextButtonStyle}" attachProp:ButtonAttachPropertyManager.BottonType="default"/>
+                <Button Content="Primary" Margin="3" Style="{DynamicResource TextButtonStyle}" attachProp:ButtonAttachPropertyManager.BottonType="primary"/>
+                <Button Content="Success" Margin="3" Style="{DynamicResource TextButtonStyle}" attachProp:ButtonAttachPropertyManager.BottonType="success"/>
+                <Button Content="Warn"  Margin="3" Style="{DynamicResource TextButtonStyle}" attachProp:ButtonAttachPropertyManager.BottonType="warn"/>
+                <Button Content="Error" Margin="3" Style="{DynamicResource TextButtonStyle}" attachProp:ButtonAttachPropertyManager.BottonType="error"/>
             </UniformGrid>
-
-            <TextBlock Text="custom corner radius:" Margin="10" FontSize="20"/>
-            <UniformGrid Columns="8" Margin="10">
-                <Button attachProp:ButtonAttachPropertyManager.CornerRadius="5" 
-                                Style="{DynamicResource PrimaryCustomizeCornerRadiusButtonStyle}"
-                                Content="radius"/>
-                <Button attachProp:ButtonAttachPropertyManager.CornerRadius="15" 
-                                Style="{DynamicResource PrimaryCustomizeCornerRadiusButtonStyle}"
-                                Content="radius"/>
-                <Button attachProp:ButtonAttachPropertyManager.CornerRadius="20 0 20 0" 
-                                Style="{DynamicResource PrimaryCustomizeCornerRadiusButtonStyle}"
-                                Content="radius"/>
-                <Button attachProp:ButtonAttachPropertyManager.CornerRadius="5" 
-                                Style="{DynamicResource DefaultCustomizeCornerRadiusButtonStyle}"
-                                Content="radius"/>
-                <Button attachProp:ButtonAttachPropertyManager.CornerRadius="20 0 20 0" 
-                                Style="{DynamicResource DefaultCustomizeCornerRadiusButtonStyle}"
-                                Content="radius"/>
+            
+            <TextBlock Text="自定义圆角:" Margin="10" FontSize="20"/>
+            <UniformGrid Columns="6" Margin="10">
+                <Button Content="disable" Margin="3" attachProp:ButtonAttachPropertyManager.CornerRadius="5" Style="{DynamicResource SquareButtonStyle}" IsEnabled="False"/>
+                <Button Content="Default" Margin="3" attachProp:ButtonAttachPropertyManager.CornerRadius="15" Style="{DynamicResource SquareButtonStyle}" attachProp:ButtonAttachPropertyManager.BottonType="default"/>
+                <Button Content="Primary" Margin="3" attachProp:ButtonAttachPropertyManager.CornerRadius="20 0 20 0" Style="{DynamicResource SquareButtonStyle}" attachProp:ButtonAttachPropertyManager.BottonType="primary"/>
+                <Button Content="Success" Margin="3" attachProp:ButtonAttachPropertyManager.CornerRadius="0 20 0 20" Style="{DynamicResource SquareButtonStyle}" attachProp:ButtonAttachPropertyManager.BottonType="success"/>
+                <Button Content="Warn"  Margin="3" Style="{DynamicResource SquareButtonStyle}" attachProp:ButtonAttachPropertyManager.BottonType="warn"/>
+                <Button Content="Error" Margin="3" Style="{DynamicResource SquareButtonStyle}" attachProp:ButtonAttachPropertyManager.BottonType="error"/>
+                
             </UniformGrid>
         </StackPanel>
 

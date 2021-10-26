@@ -19,9 +19,7 @@ namespace CustomizeUIElement.WpfControlLibrary.AttachPropertys
         public static void SetCornerRadius(DependencyObject element, CornerRadius value) => element.SetValue(CornerRadiusProperty, value);
         #endregion
 
-        #region 按钮类型 Primary Default Error Warn Success       
-
-
+        #region 按钮类型 Primary Default Error Warn Success    
 
         public static string GetBottonType(DependencyObject obj)
         {
@@ -36,12 +34,26 @@ namespace CustomizeUIElement.WpfControlLibrary.AttachPropertys
         // Using a DependencyProperty as the backing store for BottonType.  This enables animation, styling, binding, etc...
         public static readonly DependencyProperty BottonTypeProperty =
             DependencyProperty.RegisterAttached("BottonType", typeof(string), typeof(ButtonAttachPropertyManager), new PropertyMetadata("default"));
+        #endregion
 
+        #region 显示背景        
+
+        public static Visibility GetShowBackground(DependencyObject obj)
+        {
+            return (Visibility)obj.GetValue(ShowBackgroundProperty);
+        }
+
+        public static void SetShowBackground(DependencyObject obj, Visibility value)
+        {
+            obj.SetValue(ShowBackgroundProperty, value);
+        }
+
+        // Using a DependencyProperty as the backing store for ShowBackground.  This enables animation, styling, binding, etc...
+        public static readonly DependencyProperty ShowBackgroundProperty =
+            DependencyProperty.RegisterAttached("ShowBackground", typeof(Visibility), typeof(ButtonAttachPropertyManager), new PropertyMetadata(Visibility.Visible));
 
 
         #endregion
-
-
 
     }
 }
