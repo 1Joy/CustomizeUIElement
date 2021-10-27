@@ -37,7 +37,7 @@
                                                    Text="{TemplateBinding attachProp:InputBoxAttachPropertyManager.TextBoxIcon}"/>
                                     </Border>
                                     <TextBlock Grid.Column="1" x:Name="_placeHolder" VerticalAlignment="Center" 
-                                               Foreground="{DynamicResource ForeBgColor}" 
+                                               Foreground="{DynamicResource PlacehholderForeground}" 
                                                Text="{Binding Path=(attachProp:InputBoxAttachPropertyManager.PlaceHolder),
                                     RelativeSource={RelativeSource TemplatedParent}}">
                                         <TextBlock.Visibility>
@@ -113,11 +113,11 @@
                                             Visibility="{TemplateBinding attachProp:InputBoxAttachPropertyManager.TextBoxIcon,
                                         Converter={StaticResource TBIconVisibilityConverter}}">
                                         <TextBlock FontFamily="{DynamicResource IconFontFamily}" VerticalAlignment="Center" HorizontalAlignment="Center"
-                                               FontSize="14" Foreground="{DynamicResource CustomizeForeground}" FontWeight="Bold"
+                                               FontSize="14" Foreground="{DynamicResource CustomizeForeground1}" FontWeight="Bold"
                                                    Text="{TemplateBinding attachProp:InputBoxAttachPropertyManager.TextBoxIcon}"/>
                                     </Border>
                                     <TextBlock Grid.Column="1" x:Name="_placeHolder" VerticalAlignment="Center" 
-                                               Foreground="{DynamicResource ForeBgColor}" 
+                                               Foreground="{DynamicResource PlacehholderForeground}" 
                                                Text="{Binding Path=(attachProp:InputBoxAttachPropertyManager.PlaceHolder),
                                     RelativeSource={RelativeSource TemplatedParent}}">
                                         <TextBlock.Visibility>
