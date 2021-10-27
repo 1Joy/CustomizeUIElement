@@ -9,7 +9,7 @@
     <SolidColorBrush x:Key="PrimaryColor" Color="#1890FF"/>
     <SolidColorBrush x:Key="PrimaryHoverColor" Color="#69c0ff"/>
     <SolidColorBrush x:Key="DefaultColor" Color="#fff"/>
-    <SolidColorBrush x:Key="HoverColor" Color="#5698c3"/>
+    <SolidColorBrush x:Key="HoverColor" Color="#40a9ff"/>
     <SolidColorBrush x:Key="ForeBgColor" Color="#cdd1d3"/>
     <SolidColorBrush x:Key="BorderColor" Color="#5e616d"/>
     <SolidColorBrush x:Key="DisableColor" Color="#f5f5f5"/>

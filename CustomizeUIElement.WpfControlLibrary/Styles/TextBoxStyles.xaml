@@ -11,6 +11,7 @@
             <converters:TextBoxClearBtnVisibilityConverter x:Key="TBClearBtnVisibilityConverter"/>
             <converters:TextBoxPlaceHolderVisibilityConverter x:Key="TBPlaceHolderVisibilityConverter"/>
             <Style x:Key="BaseTextBox" TargetType="{x:Type TextBox}">
+                <Setter Property="VerticalAlignment" Value="Center"/>
             </Style>
             
             <Style x:Key="BaseTextBoxWithClearBtnStyle" TargetType="{x:Type TextBox}" BasedOn="{StaticResource BaseTextBox}">
@@ -32,7 +33,7 @@
                                             Visibility="{TemplateBinding attachProp:InputBoxAttachPropertyManager.TextBoxIcon,
                                         Converter={StaticResource TBIconVisibilityConverter}}">
                                         <TextBlock FontFamily="{DynamicResource IconFontFamily}" VerticalAlignment="Center" HorizontalAlignment="Center"
-                                               FontSize="14" Foreground="{DynamicResource CustomizeForeground1}"
+                                               FontSize="14" Foreground="{DynamicResource CustomizeForeground1}" FontWeight="Bold"
                                                    Text="{TemplateBinding attachProp:InputBoxAttachPropertyManager.TextBoxIcon}"/>
                                     </Border>
                                     <TextBlock Grid.Column="1" x:Name="_placeHolder" VerticalAlignment="Center" 
@@ -46,9 +47,11 @@
                                             </MultiBinding>
                                         </TextBlock.Visibility>
                                     </TextBlock>
-                                    <ScrollViewer Grid.Column="1"  x:Name="PART_ContentHost" Focusable="True" VerticalAlignment="Center"
+                                    <ScrollViewer Grid.Column="1"  x:Name="PART_ContentHost" Focusable="True"
+                                                  VerticalAlignment="{TemplateBinding VerticalAlignment}"
+                                                  
                                                HorizontalScrollBarVisibility="Hidden" VerticalScrollBarVisibility="Hidden"/>
-                                    <Button x:Name="_clearBtn" Grid.Column="2" Width="19" Height="19" Style="{DynamicResource DefaultTextButtonStyle}"
+                                    <Button x:Name="_clearBtn" Grid.Column="2" Width="19" Height="19" Style="{DynamicResource TextButtonStyle}"
                                             Content="&#xe695;"
                                             Visibility="{TemplateBinding attachProp:InputBoxAttachPropertyManager.HasClearBtn,
                                         Converter={StaticResource TBClearBtnVisibilityConverter}}"
@@ -58,6 +61,7 @@
                             <ControlTemplate.Triggers>
                                 <Trigger Property="IsMouseOver" Value="True">
                                     <Setter Property="BorderBrush" Value="{DynamicResource HoverColor}" TargetName="_border"></Setter>
+                                    <Setter Property="Foreground" Value="{DynamicResource HoverColor}" TargetName="_clearBtn"/>
                                 </Trigger>
                                 <Trigger Property="IsEnabled" Value="False">
                                     <Setter Property="Background" Value="{DynamicResource DisableColor}" TargetName="_border"/>
@@ -78,6 +82,13 @@
 
             <Style x:Key="BottomLineTextBoxWithClearBtnStyle" TargetType="{x:Type TextBox}" BasedOn="{StaticResource BaseTextBoxWithClearBtnStyle}">
                 <Setter Property="BorderThickness" Value="0,0,0,0.8"/>
+            </Style>
+
+            <Style x:Key="MutilTextBoxWithClearBtnStyle" TargetType="{x:Type TextBox}" BasedOn="{StaticResource DeafultTextBoxWithClearBtnStyle}">
+                <Setter Property="MaxWidth" Value="400"/>
+                <Setter Property="MinHeight" Value="300"/>
+                <Setter Property="TextWrapping" Value="Wrap"/>
+                <Setter Property="VerticalAlignment" Value="Top"/>
             </Style>
 
             
@@ -102,7 +113,7 @@
                                             Visibility="{TemplateBinding attachProp:InputBoxAttachPropertyManager.TextBoxIcon,
                                         Converter={StaticResource TBIconVisibilityConverter}}">
                                         <TextBlock FontFamily="{DynamicResource IconFontFamily}" VerticalAlignment="Center" HorizontalAlignment="Center"
-                                               FontSize="14" Foreground="{DynamicResource CustomizeForeground}"
+                                               FontSize="14" Foreground="{DynamicResource CustomizeForeground}" FontWeight="Bold"
                                                    Text="{TemplateBinding attachProp:InputBoxAttachPropertyManager.TextBoxIcon}"/>
                                     </Border>
                                     <TextBlock Grid.Column="1" x:Name="_placeHolder" VerticalAlignment="Center" 
@@ -118,7 +129,7 @@
                                     </TextBlock>
                                     <ScrollViewer Grid.Column="1"  x:Name="PART_ContentHost" Focusable="True" VerticalAlignment="Center"
                                                HorizontalScrollBarVisibility="Hidden" VerticalScrollBarVisibility="Hidden"/>
-                                    <Button x:Name="_clearBtn" Grid.Column="2" Width="19" Height="19" Style="{DynamicResource DefaultTextButtonStyle}"
+                                    <Button x:Name="_clearBtn" Grid.Column="2" Width="19" Height="19" Style="{DynamicResource TextButtonStyle}"
                                             Content="&#xe695;"
                                             Visibility="{TemplateBinding attachProp:InputBoxAttachPropertyManager.HasClearBtn,
                                         Converter={StaticResource TBClearBtnVisibilityConverter}}"
@@ -128,6 +139,7 @@
                             <ControlTemplate.Triggers>
                                 <Trigger Property="IsMouseOver" Value="True">
                                     <Setter Property="BorderBrush" Value="{DynamicResource HoverColor}" TargetName="_border"></Setter>
+                                    <Setter Property="Foreground" Value="{DynamicResource HoverColor}" TargetName="_clearBtn"/>
                                 </Trigger>
                                 <Trigger Property="IsEnabled" Value="False">
                                     <Setter Property="Background" Value="{DynamicResource DisableColor}" TargetName="_border"/>
@@ -145,9 +157,8 @@
                 <Setter Property="BorderThickness" Value="0.8"/>
                 <Setter Property="attachProp:InputBoxAttachPropertyManager.TextBoxCornerRadius" Value="5"/>
             </Style>
-
-
-
+            
+            
             <!--<Style x:Key="PlaceHolderIconBgTextBoxStyle" TargetType="TextBox" BasedOn="{StaticResource BaseTextBox}">
                 <Setter Property="FontFamily" Value="{DynamicResource IconFontFamily}"/>
                 <Setter Property="Template">

@@ -20,3 +20,4 @@ D:\Code\JoyCode\CustomizeUIElement\CustomizeUIElement.WpfControlLibrary\obj\Debu
 D:\Code\JoyCode\CustomizeUIElement\CustomizeUIElement.WpfControlLibrary\obj\Debug\net5.0-windows\CustomizeUIElement.WpfControlLibrary.AssemblyInfoInputs.cache
 D:\Code\JoyCode\CustomizeUIElement\CustomizeUIElement.WpfControlLibrary\obj\Debug\net5.0-windows\CustomizeUIElement.WpfControlLibrary.AssemblyInfo.cs
 D:\Code\JoyCode\CustomizeUIElement\CustomizeUIElement.WpfControlLibrary\obj\Debug\net5.0-windows\CustomizeUIElement.WpfControlLibrary.csproj.CoreCompileInputs.cache
+D:\Code\JoyCode\CustomizeUIElement\CustomizeUIElement.WpfControlLibrary\obj\Debug\net5.0-windows\CustomizeUIElement.WpfControlLibrary.csprojAssemblyReference.cache
